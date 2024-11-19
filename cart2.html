@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet meet｜蜜遇。手工甜點｜經典、美味的選擇</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+        integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="./img/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div class="header-wrapper">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./img/logo.svg" alt="logo">
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="搜尋">
+                <img src="./img/search.svg" alt="">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./about.html">關於我們</a></li>
+                    <li><a href="./product.html">商品資訊</a></li>
+                    <li><a href="./member_logut.html">會員專區</a></li>
+                    <li><a href="./contact.html">聯絡我們</a></li>
+                    <li><a href="./login.html">登入/註冊</a></li>
+                    <li><a href="./cart_empty.html"><i class="fa-solid fa-cart-shopping"></i></a><span>0</span></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- center -->
+
+    <!-- 位置指標 -->
+    <div class="guid-tour-bar">
+        <a href="./index.html">首頁</a>
+        <img src="./img/ArrowTo.svg" alt="icon">
+        <a href="./cart_empty.html">購物車</a>
+    </div>
+
+    <main>
+        <div class="wrapper-cart">
+            <div class="wrapper-cart-contain">
+                <div class="cart-step">
+                    <i class="bi bi-2-square"></i>
+                    <span>請填寫寄送資訊，並確認付款方式</span>
+                </div>
+    
+                <form class="order-info">
+                    <p>訂購人資訊</p>
+                    <label for="name">姓名<input type="text" id="name"></label>
+                    <label for="phone">電話
+                        <input type="text" id="phone">
+                    </label>
+                    <label for="address">地址
+                        <select name="" id="address">
+                            <option value="" disabled selected>城市 / 縣</option>
+                            <option value="基隆市">基隆市</option>
+                            <option value="台北市">台北市</option>
+                            <option value="新北市">新北市</option>
+                            <option value="桃園市">桃園市</option>
+                            <option value="新竹縣">新竹縣</option>
+                            <option value="新竹市">新竹市</option>
+                            <option value="宜蘭縣">宜蘭縣</option>
+                            <option value="苗栗縣">苗栗縣</option>
+                            <option value="台中市">台中市</option>
+                            <option value="彰化縣">彰化縣</option>
+                            <option value="南投縣">南投縣</option>
+                            <option value="雲林縣">雲林縣</option>
+                            <option value="嘉義縣">嘉義縣</option>
+                            <option value="嘉義市">嘉義市</option>
+                            <option value="台南市">台南市</option>
+                            <option value="高雄市">高雄市</option>
+                            <option value="屏東縣">屏東縣</option>
+                            <option value="花蓮縣">花蓮縣</option>
+                            <option value="台東縣">台東縣</option>
+                            <option value="澎湖縣">澎湖縣</option>
+                            <option value="金門縣">金門縣</option>
+                            <option value="連江縣">連江縣</option>
+                        </select>
+                        <select name="" id="">
+                            <option value="" disabled selected>地區</option>
+                        </select>
+                        <input type="text">
+                    </label>
+                    <label for="payment">付款方式
+                        <select name="" id="payment">
+                            <option value="請選擇" disabled selected>請選擇</option>
+                            <option value="貨到付款">貨到付款</option>
+                            <option value="到店付現">到店付現</option>
+                            <option value="線上刷卡">線上刷卡</option>
+                        </select>
+                    </label>
+                    <label for="pickup">取貨方式
+                        <select name="" id="pickup">
+                            <option value="請選擇" disabled selected>請選擇</option>
+                            <option value="來店自取">來店自取</option>
+                            <option value="宅配到府">宅配到府</option>
+                        </select>
+                    </label>
+                    <label for="time">指定到貨時段
+                        <select name="" id="time">
+                            <option value="任何時段">任何時段</option>
+                            <option value="13:00以前">13:00以前</option>
+                            <option value="14:00 - 18:00">14:00 - 18:00</option>
+                        </select>
+                    </label>
+                </form>
+    
+                <form class="receive-info">
+                    <p>收件人資訊</p>
+                    <label for="same"><input type="checkbox" id="same">同訂購人資訊請勾選</label>
+                    <label for="rc-name">收件人姓名<input type="text" id="rc-name"></label>
+                    <label for="rc-phone">收件人電話<input type="text" id="rc-phone"></label>
+                    <label for="rc-address">收件人地址
+                        <select name="" id="rc-address">
+                            <option value="" disabled selected>城市 / 縣</option>
+                            <option value="基隆市">基隆市</option>
+                            <option value="台北市">台北市</option>
+                            <option value="新北市">新北市</option>
+                            <option value="桃園市">桃園市</option>
+                            <option value="新竹縣">新竹縣</option>
+                            <option value="新竹市">新竹市</option>
+                            <option value="宜蘭縣">宜蘭縣</option>
+                            <option value="苗栗縣">苗栗縣</option>
+                            <option value="台中市">台中市</option>
+                            <option value="彰化縣">彰化縣</option>
+                            <option value="南投縣">南投縣</option>
+                            <option value="雲林縣">雲林縣</option>
+                            <option value="嘉義縣">嘉義縣</option>
+                            <option value="嘉義市">嘉義市</option>
+                            <option value="台南市">台南市</option>
+                            <option value="高雄市">高雄市</option>
+                            <option value="屏東縣">屏東縣</option>
+                            <option value="花蓮縣">花蓮縣</option>
+                            <option value="台東縣">台東縣</option>
+                            <option value="澎湖縣">澎湖縣</option>
+                            <option value="金門縣">金門縣</option>
+                            <option value="連江縣">連江縣</option>
+                        </select>
+                        <select name="" id="">
+                            <option value="" disabled selected>地區</option>
+                        </select>
+                        <input type="text">
+                    </label>
+                    <label for="else">備註<textarea name="" id="else"></textarea></label>
+                </form>
+            </div>
+            <table class="cart-total-price">
+                <tr>
+                    <td>商品總額</td>
+                    <td><span>NT $ <i>1125</i></span></td>
+                </tr>
+                <tr>
+                    <td>運費</td>
+                    <td><span>NT $ <i>70</i></span></td>
+                </tr>
+                <tr>
+                    <td>總金額</td>
+                    <td><span>NT $ <i>1195</i></span></td>
+                </tr>
+            </table>
+            <div style="clear: both;"></div>
+
+            <a href="" class="cart-next-step">前往結帳</a>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-info">
+            <div class="footer-text">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>About us</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="./about.html">關於我們</a></td>
+                            <td><a href="./contact.html">聯絡我們</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="./login.html">登入會員</a></td>
+                            <td><a href="./register.html">註冊會員</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="./member_logut.html">會員專區</a></td>
+                            <td><a href="./product.html">商品資訊</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Sweet meet</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>客服專線：02-27120589</td>
+                        </tr>
+                        <tr>
+                            <td>營業時間：週一 ~ 週六 10:00-21:00（每週日公休）</td>
+                        </tr>
+                        <tr>
+                            <td>地址：台北市中山區南京東路三段219號4F</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <div class="copyright">
+            <div class="copyright-text">
+                <p>© 圖片素材版權皆歸 深夜裡的法國手工甜點 所有，本專案為個人專題作品，非品牌正式委託，如有侵權，請來信告知。Email: zhuog287@gmail.com</p>
+                <div class="social-account">
+                    <a href=""><img src="./img/facebook.svg" alt="facebook"></a>
+                    <a href=""><img src="./img/twitter.svg" alt="twitter"></a>
+                    <a href=""><img src="./img/Vector.svg" alt="Line"></a>
+                    <a href=""><img src="./img/instagram.svg" alt="instagram"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
