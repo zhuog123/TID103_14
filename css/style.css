@@ -1247,3 +1247,18 @@ input#same{
 label[for='same']{
     display: inline;
 }
+
+
+
+/* --------- RWD --------- */
+@media (width <= 1400) {
+    .header-wrapper{
+        max-width: 1320px;
+    }
+}
+
+@media (width <= 1320) {
+    .header-wrapper{
+        max-width: 1200px;
+    }
+}
