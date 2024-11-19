@@ -109,19 +109,25 @@ main{
 
 /* 位置指標 */
 .guid-tour-bar{
-    /* width: 100%; */
+    width: 100%;
     height: 40px;
     background-color: #D6C4A5;
+    
+    /* padding-left: 5vw; */
+}
+.guid-tour-bar-center{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
     display: flex;
     align-items: center;
-    padding-left: 120px;
 }
-.guid-tour-bar>a,.guid-tour-bar>img{
+.guid-tour-bar-center>a,.guid-tour-bar-center>img{
     display: block;
     color: #0C2557;
     margin-right: 40px;
 }
-.guid-tour-bar>a:last-child{
+.guid-tour-bar-center>a:last-child{
     color: #1863DD;
 }
 
@@ -247,13 +253,8 @@ footer{
     padding-bottom: 20px;
 }
 .post ul{
-
     display: flex;
-    /* justify-content: center; */
     justify-content: space-between;
-}
-.post ul li{
-    /* margin: 0 40px; */
 }
 .post ul li a{
     display: block;
