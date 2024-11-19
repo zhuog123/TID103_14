@@ -1251,7 +1251,7 @@ label[for='same']{
 
 
 /* --------- RWD --------- */
-@media (width <= 1400) {
+@media screen and (max-width:1400px) {
     .header-wrapper{
         max-width: 1320px;
     }
