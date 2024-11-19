@@ -20,7 +20,6 @@ header{
 
 .header-wrapper{
     max-width: 1200px;
-    /* height: 80px; */
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -38,18 +37,20 @@ header{
 
 .header-wrapper .search-bar{
     position: relative;
+    width: 240px;
 }
 .header-wrapper input{
-    width: 270px;
+    box-sizing: border-box;
+    width: 100%;
     height: 36px;
     outline: none;
     border: 1px solid #0C2557;
     border-radius: 3px;
-    padding-left: 20px;
+    padding: 0 44px 0 20px;
 }
 .search-bar img{
     position: absolute;
-    left: 255px;
+    right: 10px;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
@@ -232,19 +233,27 @@ footer{
 }
 
 /* 店家公告 */
+.post{
+    /* width: 80vw; */
+    max-width: 960px;
+    margin: 0 auto;
+}
 .post h1{
     font-size: 36px;
     color: #D6C4A5;
     font-weight: bold;
     text-align: center;
-    padding: 40px 0;
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
 .post ul{
+
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
+    justify-content: space-between;
 }
 .post ul li{
-    margin: 0 40px;
+    /* margin: 0 40px; */
 }
 .post ul li a{
     display: block;
@@ -388,15 +397,16 @@ footer{
     text-align: center;
 }
 .index-feature ul{
+    max-width: 960px;
+    margin: 0 auto;
     padding-top: 30px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .index-feature ul li{
     width: 285px;
     text-align: center;
-    margin: 15px 20px 0;
 }
 .index-feature ul li a img{
     width: 100%;
@@ -1251,7 +1261,7 @@ label[for='same']{
 
 
 /* --------- RWD --------- */
-@media screen and (max-width:1400px) {
+/* @media screen and (max-width:1400px) {
     .header-wrapper{
         max-width: 1320px;
     }
@@ -1261,4 +1271,4 @@ label[for='same']{
     .header-wrapper{
         max-width: 1200px;
     }
-}
+} */
