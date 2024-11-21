@@ -103,14 +103,14 @@
                 <div class="send-info">
                     <div class="send-info-left">
                         <h1>寄送資訊</h1>
-                        <label for="getWay">取貨方式</label>
-                        <select name="" id="getWay">
+                        <label for="getWay">取貨方式 *</label>
+                        <select name="" id="getWay" required>
                             <option value="自取">自取</option>
                             <option value="冷藏宅配">冷藏宅配</option>
                             <option value="當日快遞">當日快遞</option>
                         </select>
-                        <label for="geDate">取貨日期</label>
-                        <input type="date" id="geDate">
+                        <label for="geDate">取貨日期 *</label>
+                        <input type="date" id="geDate" required>
                         <label for="geTime">取貨時段</label>
                         <select name="" id="geTime">
                             <option value="任何時段">任何時段</option>
@@ -144,7 +144,7 @@
                     </div>
                     <div class="order-sale">
                         <span>會員折抵</span>
-                        <span>NT $ 0</span>
+                        <span>- NT $ 0</span>
                     </div>
                     <div class="order-fare">
                         <span>運費</span>
@@ -157,7 +157,7 @@
                     <div class="order-point">
                         <h3>點數總計</h3>
                         <div class="point-use">
-                            <span>本次消費使用點數</span>
+                            <span>本次使用點數</span>
                             <span>0</span>
                         </div>
                         <div class="point-count">
@@ -165,12 +165,12 @@
                             <span>1125</span>
                         </div>
                     </div>
-                    <a href="#">訪客結帳</a>
+                    <a href="./cart2.html">訪客結帳</a>
                 </div>
                 <div class="cart-login-notice">
                     <h1>還不是會員嗎？立即加入享有以下優惠：</h1>
                     <ul>
-                        <li><i>累積點數：</i>消費可累積點數，讓每一筆購物更有價值。</li>
+                        <li><i>累積點數：</i>消費可累積點數，一元累積一點，讓每一筆購物更有價值。</li>
                         <li><i>限時限定優惠：</i>隨時追蹤最新資訊，第一時間獲知限時優惠，不再錯過任何好康！</li>
                         <li>現在快速加入，立即享受優惠！</li>
                     </ul>

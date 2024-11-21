@@ -54,135 +54,117 @@
     </div>
 
     <main>
-        <!-- <div class="wrapper-cart">
-            <div class="wrapper-cart-contain">
-                <div class="cart-step">
-                    <i class="bi bi-2-square"></i>
-                    <span>請填寫寄送資訊，並確認付款方式</span>
-                </div>
-    
-                <form class="order-info">
-                    <p>訂購人資訊</p> <span>登入累積點數，享有更多專屬優惠！<a href="./login.html">立即登入</a></span>
-                    
-                    <label for="name">姓名<input type="text" id="name"></label>
-                    <label for="phone">電話<input type="text" id="phone"></label>
-                    <label for="email">信箱<input type="text" id="email"></label>
-                    <label for="address">地址
-                        <select name="" id="address">
-                            <option value="" disabled selected>城市 / 縣</option>
-                            <option value="基隆市">基隆市</option>
-                            <option value="台北市">台北市</option>
-                            <option value="新北市">新北市</option>
-                            <option value="桃園市">桃園市</option>
-                            <option value="新竹縣">新竹縣</option>
-                            <option value="新竹市">新竹市</option>
-                            <option value="宜蘭縣">宜蘭縣</option>
-                            <option value="苗栗縣">苗栗縣</option>
-                            <option value="台中市">台中市</option>
-                            <option value="彰化縣">彰化縣</option>
-                            <option value="南投縣">南投縣</option>
-                            <option value="雲林縣">雲林縣</option>
-                            <option value="嘉義縣">嘉義縣</option>
-                            <option value="嘉義市">嘉義市</option>
-                            <option value="台南市">台南市</option>
-                            <option value="高雄市">高雄市</option>
-                            <option value="屏東縣">屏東縣</option>
-                            <option value="花蓮縣">花蓮縣</option>
-                            <option value="台東縣">台東縣</option>
-                            <option value="澎湖縣">澎湖縣</option>
-                            <option value="金門縣">金門縣</option>
-                            <option value="連江縣">連江縣</option>
-                        </select>
-                        <select name="" id="">
-                            <option value="" disabled selected>地區</option>
-                        </select>
-                        <input type="text">
-                    </label>
-                    <label for="payment">付款方式
-                        <select name="" id="payment">
-                            <option value="請選擇" disabled selected>請選擇</option>
-                            <option value="貨到付款">貨到付款</option>
-                            <option value="到店付現">到店付現</option>
-                            <option value="線上刷卡">線上刷卡</option>
-                        </select>
-                    </label>
-                    <label for="pickup">取貨方式
-                        <select name="" id="pickup">
-                            <option value="請選擇" disabled selected>請選擇</option>
-                            <option value="來店自取">來店自取</option>
-                            <option value="宅配到府">宅配到府</option>
-                        </select>
-                    </label>
-                    <label for="time">指定到貨時段
-                        <select name="" id="time">
-                            <option value="任何時段">任何時段</option>
-                            <option value="13:00以前">13:00以前</option>
-                            <option value="14:00 - 18:00">14:00 - 18:00</option>
-                        </select>
-                    </label>
-                </form>
-    
-                <form class="receive-info">
-                    <p>收件人資訊</p>
-                    <label for="same"><input type="checkbox" id="same">同訂購人資訊請勾選</label>
-                    <label for="rc-name">收件人姓名<input type="text" id="rc-name"></label>
-                    <label for="rc-phone">收件人電話<input type="text" id="rc-phone"></label>
-                    <label for="rc-address">收件人地址
-                        <select name="" id="rc-address">
-                            <option value="" disabled selected>城市 / 縣</option>
-                            <option value="基隆市">基隆市</option>
-                            <option value="台北市">台北市</option>
-                            <option value="新北市">新北市</option>
-                            <option value="桃園市">桃園市</option>
-                            <option value="新竹縣">新竹縣</option>
-                            <option value="新竹市">新竹市</option>
-                            <option value="宜蘭縣">宜蘭縣</option>
-                            <option value="苗栗縣">苗栗縣</option>
-                            <option value="台中市">台中市</option>
-                            <option value="彰化縣">彰化縣</option>
-                            <option value="南投縣">南投縣</option>
-                            <option value="雲林縣">雲林縣</option>
-                            <option value="嘉義縣">嘉義縣</option>
-                            <option value="嘉義市">嘉義市</option>
-                            <option value="台南市">台南市</option>
-                            <option value="高雄市">高雄市</option>
-                            <option value="屏東縣">屏東縣</option>
-                            <option value="花蓮縣">花蓮縣</option>
-                            <option value="台東縣">台東縣</option>
-                            <option value="澎湖縣">澎湖縣</option>
-                            <option value="金門縣">金門縣</option>
-                            <option value="連江縣">連江縣</option>
-                        </select>
-                        <select name="" id="">
-                            <option value="" disabled selected>地區</option>
-                        </select>
-                        <input type="text">
-                    </label>
-                    <label for="else">備註<textarea name="" id="else"></textarea></label>
-                </form>
-            </div>
-            <table class="cart-total-price">
-                <tr>
-                    <td>商品總額</td>
-                    <td><span>NT $ <i>1125</i></span></td>
-                </tr>
-                <tr>
-                    <td>運費</td>
-                    <td><span>NT $ <i>70</i></span></td>
-                </tr>
-                <tr>
-                    <td>會員優惠折抵</td>
-                    <td><span>- NT $ <i>50</i></span></td>
-                </tr>
-                <tr>
-                    <td>總金額</td>
-                    <td><span>NT $ <i>1145</i></span></td>
-                </tr>
-            </table>
-            <div style="clear: both;"></div>
+        <div class="wrapper-cart">
+            <div class="wrapper-cart2">
+                <div class="wrapper-cart-contain">
+                    <!-- 左側 -->
+                    <section class="cart-check-profile">
+                        <div>
+                            <h2>訂購人資訊</h2>
+                            <ul>
+                                <li>
+                                    <label for="orderName">姓名 *</label>
+                                    <input type="text" id="orderName">
+                                </li>
+                                <li>
+                                    <label for="orderPhone">電話 *</label>
+                                    <input type="text" id="orderPhone">
+                                </li>
 
-            <a href="" class="cart-next-step">確定結帳</a>
-        </div> -->
+                                <li>
+                                    <label for="orderEmail">Email</label>
+                                    <input type="text" id="orderEmail">
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2>收件人資訊</h2>
+                            <ul>
+                                <li>
+                                    <label for="receiveName">姓名 *</label>
+                                    <input type="text" id="receiveName">
+                                </li>
+                                <li>
+                                    <label for="receivePhone">電話 *</label>
+                                    <input type="text" id="receivePhone">
+                                </li>
+                                <li>
+                                    <label for="receiveElse">備註</label>
+                                    <textarea name="" id="receiveElse"></textarea>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- 右側 -->
+                    <section class="cart-check-item">
+                        <h2>訂單詳情</h2>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>商品名稱</th>
+                                    <th>購買數量</th>
+                                    <th>價格總計</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>酒漬葡萄超厚層布丁塔</td>
+                                    <td>x 1</td>
+                                    <td>NT $ 625</td>
+                                </tr>
+                                <tr>
+                                    <td>蘋果千層酥派</td>
+                                    <td>x 1</td>
+                                    <td>NT $ 500</td>
+                                </tr>
+                                <tr>
+                                    <td>運費</td>
+                                    <td></td>
+                                    <td>NT $ 0</td>
+                                </tr>
+                                <tr>
+                                    <td>會員折抵</td>
+                                    <td></td>
+                                    <td>- NT $ 0</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td>總計</td>
+                                    <td></td>
+                                    <td>NT $ 1125</td>
+                                </tr>
+                                <tr>
+                                    <td>本次消費累積點數(會員專屬)</td>
+                                    <td></td>
+                                    <td>1125</td>
+                                </tr>
+                                <tr>
+                                    <td>取貨時段</td>
+                                    <td></td>
+                                    <td>自取-2024-11-30 17:00</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <div class="cart-login-notice">
+                            <h1>還不是會員嗎？立即加入享有以下優惠：</h1>
+                            <ul>
+                                <li><i>累積點數：</i>消費可累積點數，一元累積一點，讓每一筆購物更有價值。</li>
+                                <li><i>限時限定優惠：</i>隨時追蹤最新資訊，第一時間獲知限時優惠，不再錯過任何好康！</li>
+                                <li>現在快速加入，立即享受優惠！</li>
+                            </ul>
+                            <a href="./login.html">前往登入 / 註冊會員</a>
+                        </div>
+                    </section>
+                </div>
+                <div class="cart-step-button">
+                    <a href="./cart.html">上一步</a>
+                    <a href="#">確定付款</a>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- footer -->

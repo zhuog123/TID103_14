@@ -1007,15 +1007,6 @@ input#get-new, input#privacy-policy{
 .product-container-img:hover span{
     opacity: 1;
 }
-.product-tag{
-    display: block;
-    padding: 10px;
-    position: absolute;
-    top: 0;
-    left: 5%;
-    background-color: #9E8966;
-    color: #F9F7F3;
-}
 
 /* 頁數 */
 .pages{
@@ -1290,69 +1281,126 @@ input#get-new, input#privacy-policy{
 
 /* ---------------- cart2 ----------------*/
 
-/* .wrapper-cart-contain{
+.wrapper-cart2{
+    box-sizing: border-box;
+    flex-direction: column;
     width: 100%;
-    border-bottom: 1px solid #D6C4A5;
+    padding: 1.5rem;
+    background-color: #F9F7F3;
+    border: 3px solid #D6C4A5;
+    border-radius: 10px;
 }
-.order-info p,.receive-info p{
-    padding: 20px 50px;
-    font-weight: bold;
-    font-size: 20px;
-}
-.order-info,.receive-info{
-    width: 90%;
-}
-.order-info label,.receive-info label{
-    padding: 10px 0 10px 70px;
+.wrapper-cart-contain{
+    box-sizing: border-box;
+    width: 100%;
     display: flex;
-}
-.receive-info label:nth-of-type(1){
-    padding: 0 0 0 54px;
-}
-.order-info input,.receive-info input{
-    width: 70%;
-    height: 24px;
-    outline: none;
-    border: 0px solid transparent;
-    border-bottom: 1px solid #D6C4A5;
-    background-color: transparent;
-    color: #fff;
-    margin-left: 20px;
-
-    flex-grow: 1;
-}
-.order-info select,.receive-info select{
-    margin-left: 20px;
-    height: 24px;
-    outline: none;
-    background-color: transparent;
-    color: #D6C4A5;
-}
-.order-info select option,.receive-info option{
-    color: #333;
-}
-.receive-info label[for='same']{
-    display: inline-flex;
-    align-items: center;
-}
-input#same{
-    width: auto;
-    height: auto;
-    margin-right: 20px;
-    transform: scale(1.5);
-}
-.receive-info label[for='else']{
-    display: flex;
-    align-items: flex-start;
     gap: 20px;
 }
-.receive-info textarea{
-    height: 75px;
-    flex-grow: 1;
+.cart-check-profile, .cart-check-item{
+    width: 50%;
 }
-label[for='same']{
-    display: inline;
-} */
+
+/* 左側 */
+.cart-check-profile{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.cart-check-item{
+    background-color: #D6C4A5;
+}
+.cart-check-profile h2,.cart-check-item h2{
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #0C2557;
+}
+.cart-check-profile ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cart-check-profile ul li label{
+    display: block;
+    padding: 8px 0;
+}
+.cart-check-profile ul li:nth-of-type(1){
+    flex-basis: 60%;
+}
+.cart-check-profile ul li:nth-of-type(3){
+    flex-basis: 100%;
+}
+.cart-check-profile ul li input,.cart-check-profile ul li textarea{
+    outline: none;
+    border: 1px solid #0C2557;
+    background-color: transparent;
+    box-sizing: border-box;
+    padding: 0 10px;
+    width: 90%;
+    height: 42px;
+}
+.cart-check-profile ul li textarea{
+    height: 100px;
+    padding: 10px;
+}
+
+/* 右側 */
+.cart-check-item{
+    box-sizing: border-box;
+    padding: 1.5rem;
+}
+.cart-check-item table{
+    width: 100%;
+    white-space: nowrap;
+}
+.cart-check-item table th,.cart-check-item table td{
+    width: 33.3%;
+    text-align: center;
+}
+.cart-check-item thead tr{
+    border-bottom: 1px solid #0C2557;
+}
+.cart-check-item thead th{
+    padding: 0 0.5rem;
+    padding-bottom: 25px;
+}
+.cart-check-item tbody td,.cart-check-item tfoot td{
+    padding: 0.5rem;
+}
+.cart-check-item tbody tr:last-child{
+    border-bottom: 1px solid #0C2557;
+}
+.cart-check-item tfoot tr:first-child{
+    border-bottom: 1px solid #0C2557;
+}
+.cart-check-item thead th:nth-of-type(1),.cart-check-item tbody td:nth-of-type(1),.cart-check-item tfoot td:nth-of-type(1){
+    text-align: left;
+}
+.cart-check-item thead th:nth-of-type(3),.cart-check-item tbody td:nth-of-type(3),.cart-check-item tfoot td:nth-of-type(3){
+    text-align: right;
+}
+
+.cart-step-button{
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+.cart-step-button a{
+    display: block;
+    width: 50%;
+    height: 42px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 42px;
+    color: #F9F7F3;
+    background-color: #0C2557;
+    transition: all .2s linear;
+}
+.cart-step-button a:hover{
+    background-color: #1C93FF;
+    color: #0C2557;
+}
 
 
 
