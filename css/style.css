@@ -737,9 +737,7 @@ input#get-new, input#privacy-policy{
 /* ---------------- contact ----------------*/
 .contact-wrapper{
     width: 1170px;
-    height: 464px; /*  */
     margin: 80px auto;
-    /* background-color: violet; */
     display: flex;
     align-items: center;
     gap: 30px;
@@ -766,6 +764,8 @@ input#get-new, input#privacy-policy{
     border-radius: 3px;
     background-color: transparent;
     color: #fff;
+    box-sizing: border-box;
+    padding: 0 10px;
 }
 .contact-table select{
     width: 479px;
@@ -781,6 +781,7 @@ input#get-new, input#privacy-policy{
     width: 170px;
     height: 48px;
     line-height: 24px;
+    font-size: 18px;
     font-weight: bold;
     background-color: #D6C4A5;
     color: #0C2557;
@@ -788,6 +789,11 @@ input#get-new, input#privacy-policy{
     border: 0px solid transparent;
     border-radius: 3px;
     cursor: pointer;
+    transition: all .2s linear;
+}
+.contact-table button:hover{
+    background-color: #1C93FF;
+    color: #F9F7F3;
 }
 
 /* ---------------- about ----------------*/
@@ -941,6 +947,7 @@ input#get-new, input#privacy-policy{
     height: 42px;
     cursor: pointer;
     outline: none;
+    padding: 0 10px;
 }
 /* 全部品項 */
 .product-container{
