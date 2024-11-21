@@ -1290,7 +1290,6 @@ input#get-new, input#privacy-policy{
 
 .wrapper-cart2{
     box-sizing: border-box;
-    flex-direction: column;
     width: 100%;
     padding: 1.5rem;
     background-color: #F9F7F3;
@@ -1326,24 +1325,19 @@ input#get-new, input#privacy-policy{
 .cart-check-profile ul{
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
 }
 .cart-check-profile ul li label{
     display: block;
     padding: 8px 0;
 }
-.cart-check-profile ul li:nth-of-type(1){
-    flex-basis: 60%;
-}
-.cart-check-profile ul li:nth-of-type(3){
-    flex-basis: 100%;
-}
-.cart-check-profile ul li input,.cart-check-profile ul li textarea{
+.cart-check-profile ul li input,.cart-check-profile ul li textarea,.cart-check-profile ul li select{
     outline: none;
     border: 1px solid #0C2557;
     background-color: transparent;
     box-sizing: border-box;
     padding: 0 10px;
-    width: 90%;
+    width: 100%;
     height: 42px;
 }
 .cart-check-profile ul li textarea{
@@ -1359,6 +1353,7 @@ input#get-new, input#privacy-policy{
 .cart-check-item table{
     width: 100%;
     white-space: nowrap;
+    margin-bottom: 20px;
 }
 .cart-check-item table th,.cart-check-item table td{
     width: 33.3%;
