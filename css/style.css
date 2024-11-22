@@ -4,6 +4,10 @@ a{
     text-decoration: none;
 }
 
+*{
+    font-family: Arial, 'Times New Roman', 'Noto Sans TC';
+}
+
 /* ----- header ---- */
 header{
     width: 100%;
