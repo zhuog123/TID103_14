@@ -1,9 +1,5 @@
 @import url(./reset.css);
 
-/* body{
-    box-sizing: border-box;
-} */
-
 a{
     text-decoration: none;
 }
@@ -1403,6 +1399,154 @@ input#get-new, input#privacy-policy{
     background-color: #1C93FF;
     color: #0C2557;
 }
+
+/* ---------------- item ----------------*/
+
+.wrapper-item{
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    color: #D6C4A5;
+}
+/* -- 商品主圖 -- */
+/* 左 */
+.item-show{
+    padding: 50px 0;
+    display: flex;
+    gap: 20px;
+}
+.item-big-img{
+    width: 40%;
+}
+.item-big-img img{
+    width: 100%;
+}
+
+/* 中 */
+.item-small-img{
+    width: 10%;
+    cursor: pointer;
+}
+.item-small-img img{
+    width: 100%;
+}
+
+/* 右 */
+.item-info{
+    width: 50%;
+}
+.item-info h1{
+    font-weight: bold;
+    font-size: 30px;
+}
+.item-info p{
+    text-align: justify;
+    line-height: 1.5;
+    padding: 30px 0;
+}
+.item-info b{
+    display: block;
+    font-weight: bold;
+    font-size: 36px;
+}
+.item-info i{
+    display: block;
+    padding: 20px 0;
+}
+.item-info ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.item-info ul>li{
+    padding: 10px;
+    border: 1px solid #D6C4A5;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.item-info ul>li.choose-size{
+    background-color: #D6C4A5;
+    color: #0C2557;
+}
+.item-info ul>li:last-child{
+    margin-right: 0;
+}
+.add-to-cart{
+    padding: 30px 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+}
+.item-counter{
+    flex-grow: 1;
+    font-size: 0;
+    display: flex;
+    height: 100%;
+    line-height: 50px;
+    min-width: 0; 
+}
+.item-counter span{
+    border: 1px solid #D6C4A5;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 0 20px;
+    height: 100%;
+    box-sizing: border-box;
+    flex-shrink: 0; 
+}
+.item-counter span:nth-of-type(1){
+    border-radius: 7px 0 0 7px;
+}
+.item-counter span:nth-of-type(2){
+    border-radius: 0 7px 7px 0 ;
+}
+.item-counter input{
+    color: #D6C4A5;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid #D6C4A5;
+    font-size: 30px;
+    text-align: center;
+    height: 100%;
+    box-sizing: border-box;
+    min-width: 0;
+}
+.add-to-cart>span{
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #D6C4A5;
+    color: #0C2557;
+    height: 100%;
+    line-height: 50px;
+    padding: 0 20px;
+    cursor: pointer;
+    flex-basis: 140px;
+    text-align: center;
+    flex-shrink: 0; 
+}
+
+/* 商品BN */
+.item-banner{
+    width: 100%;
+    font-size: 0;
+}
+.item-banner img{
+    width: 100%;
+}
+
+/* 相關商品 */
+.item-other{
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+.item-other h2{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+
 
 
 
