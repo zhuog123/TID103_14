@@ -1427,8 +1427,6 @@ input#get-new, input#privacy-policy{
 /* 中 */
 .item-small-img{
     width: 10%;
-    cursor: pointer;
-
     height: calc(100vh - 200px);
 }
 .item-small-img ul{
@@ -1441,6 +1439,7 @@ input#get-new, input#privacy-policy{
     padding-right: 10px;
 }
 .item-small-img img{
+    cursor: pointer;
     width: 100%;
 }
 
