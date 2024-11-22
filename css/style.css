@@ -1420,16 +1420,29 @@ input#get-new, input#privacy-policy{
 }
 .item-big-img img{
     width: 100%;
+    display: block;
 }
 
 /* 中 */
 .item-small-img{
     width: 10%;
     cursor: pointer;
+
+    height: calc(100vh - 200px);
+}
+.item-small-img ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    overflow-y: auto;
+    max-height: 100%;
+    padding-right: 10px;
 }
 .item-small-img img{
     width: 100%;
 }
+
 
 /* 右 */
 .item-info{
