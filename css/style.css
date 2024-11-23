@@ -574,7 +574,7 @@ footer{
     mask-size: 100% 100%;
     position: absolute;
     right: 5%;
-    top: calc(50% + 8px);  /* 隱藏 label 高 16左右 */
+    top: calc(50% + 8px);  /* 隱藏 label 高 16 左右 */
     transform: translateY(-50%);
     font-size: 30px;
     cursor: pointer;
@@ -599,7 +599,7 @@ footer{
     mask-size: 100% 100%;
     position: absolute;
     right: 5%;
-    top: 50%;
+    top: calc(50% + 8px);  /* 隱藏 label 高 16 左右 */
     transform: translateY(-50%);
     cursor: pointer;
     font-size: 30px;
@@ -700,10 +700,6 @@ input#get-new, input#privacy-policy{
     position: relative;
     z-index: 3;
 }
-/* .member-level{
-    background-color: #0C2557;
-    width: 100%;
-} */
 .member-level-introduction{
     width: 1140px;
     margin: 0 auto;
@@ -1068,7 +1064,6 @@ input#get-new, input#privacy-policy{
     width: 570px;
     height: 538px;
     margin: 60px auto;
-    /* background-color: gray; */
     display: flex;
     flex-direction: column;
     gap: 37px;
@@ -1446,7 +1441,6 @@ input#get-new, input#privacy-policy{
     cursor: pointer;
     width: 100%;
 }
-
 
 /* 右 */
 .item-info{

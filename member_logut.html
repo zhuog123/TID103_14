@@ -11,7 +11,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+        integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="shortcut icon" href="./img/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -59,53 +63,65 @@
         </div>
 
         <!-- <div class="member-level"> -->
-            <div class="member-level-introduction">
-                <h1>會員等級說明</h1>
-                <div class="member-level-introduction-center">
-                    <article>
-                        <h3><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M15.5 2a3.5 3.5 0 0 1 3.437 4.163l-.015.066a4.502 4.502 0 0 1 .303 8.428l-1.086 6.507a1 1 0 0 1-.986.836H6.847a1 1 0 0 1-.986-.836l-1.029-6.17a3 3 0 0 1-.829-5.824L4 9a6 6 0 0 1 8.575-5.42A3.5 3.5 0 0 1 15.5 2M11 15H9v5h2zm4 0h-2v5h2zm2.5-2a2.5 2.5 0 1 0-.956-4.81l-.175.081a2 2 0 0 1-2.663-.804l-.07-.137A4 4 0 0 0 10 5C7.858 5 6.109 6.684 6.005 8.767L6 8.964l.003.17a2 2 0 0 1-1.186 1.863l-.15.059A1.001 1.001 0 0 0 5 13z"/></svg> 一般蛋糕</h3>
-                        <ul>
-                            <li>會員優惠：無</li>
-                            <li>升級方式：官網、各實體店面加入</li>
-                            <li>會員期限：無期限</li>
-                            <li>生日禮金：無 </li>
-                        </ul>
-                    </article>
+        <div class="member-level-introduction">
+            <h1>會員等級說明</h1>
+            <div class="member-level-introduction-center">
+                <article>
+                    <h3><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M15.5 2a3.5 3.5 0 0 1 3.437 4.163l-.015.066a4.502 4.502 0 0 1 .303 8.428l-1.086 6.507a1 1 0 0 1-.986.836H6.847a1 1 0 0 1-.986-.836l-1.029-6.17a3 3 0 0 1-.829-5.824L4 9a6 6 0 0 1 8.575-5.42A3.5 3.5 0 0 1 15.5 2M11 15H9v5h2zm4 0h-2v5h2zm2.5-2a2.5 2.5 0 1 0-.956-4.81l-.175.081a2 2 0 0 1-2.663-.804l-.07-.137A4 4 0 0 0 10 5C7.858 5 6.109 6.684 6.005 8.767L6 8.964l.003.17a2 2 0 0 1-1.186 1.863l-.15.059A1.001 1.001 0 0 0 5 13z" />
+                        </svg> 一般蛋糕</h3>
+                    <ul>
+                        <li>會員優惠：無</li>
+                        <li>升級方式：官網、各實體店面加入</li>
+                        <li>會員期限：無期限</li>
+                        <li>生日禮金：無 </li>
+                    </ul>
+                </article>
 
-                    <article>
-                        <h3><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M15.5 2a3.5 3.5 0 0 1 3.437 4.163l-.015.066a4.502 4.502 0 0 1 .303 8.428l-1.086 6.507a1 1 0 0 1-.986.836H6.847a1 1 0 0 1-.986-.836l-1.029-6.17a3 3 0 0 1-.829-5.824L4 9a6 6 0 0 1 8.575-5.42A3.5 3.5 0 0 1 15.5 2M11 15H9v5h2zm4 0h-2v5h2zm2.5-2a2.5 2.5 0 1 0-.956-4.81l-.175.081a2 2 0 0 1-2.663-.804l-.07-.137A4 4 0 0 0 10 5C7.858 5 6.109 6.684 6.005 8.767L6 8.964l.003.17a2 2 0 0 1-1.186 1.863l-.15.059A1.001 1.001 0 0 0 5 13z"/></svg> 銀白蛋糕</h3>
-                        <ul>
-                            <li>會員優惠：無</li>
-                            <li>升級方式：消費滿$300元以上</li>
-                            <li>使用通路：官網、各實體店面</li>
-                            <li>生日禮金：無 </li>
-                            <li>生日禮金：$100元購物金（當月30天有效）</li>
-                        </ul>
-                    </article>
+                <article>
+                    <h3><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M15.5 2a3.5 3.5 0 0 1 3.437 4.163l-.015.066a4.502 4.502 0 0 1 .303 8.428l-1.086 6.507a1 1 0 0 1-.986.836H6.847a1 1 0 0 1-.986-.836l-1.029-6.17a3 3 0 0 1-.829-5.824L4 9a6 6 0 0 1 8.575-5.42A3.5 3.5 0 0 1 15.5 2M11 15H9v5h2zm4 0h-2v5h2zm2.5-2a2.5 2.5 0 1 0-.956-4.81l-.175.081a2 2 0 0 1-2.663-.804l-.07-.137A4 4 0 0 0 10 5C7.858 5 6.109 6.684 6.005 8.767L6 8.964l.003.17a2 2 0 0 1-1.186 1.863l-.15.059A1.001 1.001 0 0 0 5 13z" />
+                        </svg> 銀白蛋糕</h3>
+                    <ul>
+                        <li>會員優惠：無</li>
+                        <li>升級方式：消費滿$300元以上</li>
+                        <li>使用通路：官網、各實體店面</li>
+                        <li>生日禮金：無 </li>
+                        <li>生日禮金：$100元購物金（當月30天有效）</li>
+                    </ul>
+                </article>
 
-                    <article>
-                        <h3><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M15.5 2a3.5 3.5 0 0 1 3.437 4.163l-.015.066a4.502 4.502 0 0 1 .303 8.428l-1.086 6.507a1 1 0 0 1-.986.836H6.847a1 1 0 0 1-.986-.836l-1.029-6.17a3 3 0 0 1-.829-5.824L4 9a6 6 0 0 1 8.575-5.42A3.5 3.5 0 0 1 15.5 2M11 15H9v5h2zm4 0h-2v5h2zm2.5-2a2.5 2.5 0 1 0-.956-4.81l-.175.081a2 2 0 0 1-2.663-.804l-.07-.137A4 4 0 0 0 10 5C7.858 5 6.109 6.684 6.005 8.767L6 8.964l.003.17a2 2 0 0 1-1.186 1.863l-.15.059A1.001 1.001 0 0 0 5 13z"/></svg> 黃金蛋糕</h3>
-                        <ul>
-                            <li>會員優惠：95折</li>
-                            <li>升級方式：消費滿$6000元</li>
-                            <li>使用通路：官網、各實體店面</li>
-                            <li>生日禮金：一年期限 </li>
-                            <li>生日禮金：$100元購物金（當月30天有效）</li>
-                        </ul>
-                    </article>
+                <article>
+                    <h3><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M15.5 2a3.5 3.5 0 0 1 3.437 4.163l-.015.066a4.502 4.502 0 0 1 .303 8.428l-1.086 6.507a1 1 0 0 1-.986.836H6.847a1 1 0 0 1-.986-.836l-1.029-6.17a3 3 0 0 1-.829-5.824L4 9a6 6 0 0 1 8.575-5.42A3.5 3.5 0 0 1 15.5 2M11 15H9v5h2zm4 0h-2v5h2zm2.5-2a2.5 2.5 0 1 0-.956-4.81l-.175.081a2 2 0 0 1-2.663-.804l-.07-.137A4 4 0 0 0 10 5C7.858 5 6.109 6.684 6.005 8.767L6 8.964l.003.17a2 2 0 0 1-1.186 1.863l-.15.059A1.001 1.001 0 0 0 5 13z" />
+                        </svg> 黃金蛋糕</h3>
+                    <ul>
+                        <li>會員優惠：95折</li>
+                        <li>升級方式：消費滿$6000元</li>
+                        <li>使用通路：官網、各實體店面</li>
+                        <li>生日禮金：一年期限 </li>
+                        <li>生日禮金：$100元購物金（當月30天有效）</li>
+                    </ul>
+                </article>
 
-                    <article>
-                        <h3><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M15.5 2a3.5 3.5 0 0 1 3.437 4.163l-.015.066a4.502 4.502 0 0 1 .303 8.428l-1.086 6.507a1 1 0 0 1-.986.836H6.847a1 1 0 0 1-.986-.836l-1.029-6.17a3 3 0 0 1-.829-5.824L4 9a6 6 0 0 1 8.575-5.42A3.5 3.5 0 0 1 15.5 2M11 15H9v5h2zm4 0h-2v5h2zm2.5-2a2.5 2.5 0 1 0-.956-4.81l-.175.081a2 2 0 0 1-2.663-.804l-.07-.137A4 4 0 0 0 10 5C7.858 5 6.109 6.684 6.005 8.767L6 8.964l.003.17a2 2 0 0 1-1.186 1.863l-.15.059A1.001 1.001 0 0 0 5 13z"/></svg> 白金蛋糕</h3>
-                        <ul>
-                            <li>會員優惠：9折</li>
-                            <li>升級方式：消費滿$10000元</li>
-                            <li>使用通路：官網、各實體店面</li>
-                            <li>生日禮金：一年期限 </li>
-                            <li>生日禮金：$200元購物金（當月30天有效）</li>
-                        </ul>
-                    </article>
-                </div>
+                <article>
+                    <h3><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M15.5 2a3.5 3.5 0 0 1 3.437 4.163l-.015.066a4.502 4.502 0 0 1 .303 8.428l-1.086 6.507a1 1 0 0 1-.986.836H6.847a1 1 0 0 1-.986-.836l-1.029-6.17a3 3 0 0 1-.829-5.824L4 9a6 6 0 0 1 8.575-5.42A3.5 3.5 0 0 1 15.5 2M11 15H9v5h2zm4 0h-2v5h2zm2.5-2a2.5 2.5 0 1 0-.956-4.81l-.175.081a2 2 0 0 1-2.663-.804l-.07-.137A4 4 0 0 0 10 5C7.858 5 6.109 6.684 6.005 8.767L6 8.964l.003.17a2 2 0 0 1-1.186 1.863l-.15.059A1.001 1.001 0 0 0 5 13z" />
+                        </svg> 白金蛋糕</h3>
+                    <ul>
+                        <li>會員優惠：9折</li>
+                        <li>升級方式：消費滿$10000元</li>
+                        <li>使用通路：官網、各實體店面</li>
+                        <li>生日禮金：一年期限 </li>
+                        <li>生日禮金：$200元購物金（當月30天有效）</li>
+                    </ul>
+                </article>
             </div>
+        </div>
         <!-- </div> -->
         <div class="toTop">
             <i class="bi bi-arrow-bar-up"></i>
