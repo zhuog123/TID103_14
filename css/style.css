@@ -145,6 +145,7 @@ main{
     opacity: .7;
     transition: all .1s ease;
     cursor: pointer;
+    display: none;
 }
 .toTop i{
     line-height: 70px;
