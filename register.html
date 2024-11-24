@@ -61,20 +61,20 @@
             <div class="login-box">
                 <div class="form-box">
                     <h1>註冊會員</h1>
-                    <form action="" method="post">
+                    <form action="" method="post" id="registerForm">
                         <div class="phone-email">
-                            <label for="phone-email">電郵或手機號碼</label>
+                            <label for="phone-email">電郵或手機號碼為 必填*</label>
                             <input type="text" placeholder="請輸入電郵或手機號碼" id="phone-email">
                         </div>
-                        <div class="password">
-                            <label for="password">密碼</label>
-                            <input type="password" placeholder="請輸入密碼" id="password">
+                        <div class="password becheck">
+                            <label for="password">密碼為 必填*</label>
+                            <input type="password" placeholder="請輸入密碼" id="password" minlength="6" maxlength="8">
                             <span class="humbleicons--eye-close show"></span>
                             <span class="mage--eye"></span>
                         </div>
                         <div class="password recheck">
-                            <label for="repassword">密碼</label>
-                            <input type="password" placeholder="再次輸入密碼" id="repassword">
+                            <label for="repassword">再次輸入密碼為 必填*</label>
+                            <input type="password" placeholder="再次輸入密碼" id="repassword" minlength="6" maxlength="8">
                             <span class="humbleicons--eye-close show"></span>
                             <span class="mage--eye"></span>
                         </div>

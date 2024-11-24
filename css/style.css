@@ -509,14 +509,15 @@ footer{
 }
 .form-box form>div{
     border-bottom: 1px solid #999;
-    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
 }
 .form-box form .password{
     position: relative;
 }
 .form-box form>div>label{
     color: red;
-    opacity: 0;
+    display: none;
     font-size: 14px;
 }
 .form-box form>div>input{
@@ -575,7 +576,7 @@ footer{
     mask-size: 100% 100%;
     position: absolute;
     right: 5%;
-    top: calc(50% + 8px);  /* 隱藏 label 高 16 左右 */
+    top: 50%;
     transform: translateY(-50%);
     font-size: 30px;
     cursor: pointer;
@@ -600,7 +601,7 @@ footer{
     mask-size: 100% 100%;
     position: absolute;
     right: 5%;
-    top: calc(50% + 8px);  /* 隱藏 label 高 16 左右 */
+    top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
     font-size: 30px;
@@ -744,7 +745,7 @@ input#get-new, input#privacy-policy{
     height: 464px;
     border: 1px solid #D6C4A5;
     border-radius: 7px;
-    padding: 48px;
+    padding: 30px 48px;
     box-sizing: border-box;
 }
 .contact-table p{
@@ -764,8 +765,11 @@ input#get-new, input#privacy-policy{
     box-sizing: border-box;
     padding: 0 10px;
 }
+.contact-table textarea{
+    height: 105px;
+}
 .contact-table select{
-    width: 479px;
+    width: 474px;
     color: #D6C4A5;
 }
 .contact-table select option{
@@ -1128,6 +1132,9 @@ input#get-new, input#privacy-policy{
 }
 .buy-info{
     margin-bottom: 20px;
+}
+.cart-product-info table{
+    width: 100%;
 }
 .cart-title th{
     margin: 20px 0;
