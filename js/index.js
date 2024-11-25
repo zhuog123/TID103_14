@@ -56,13 +56,13 @@ function checkLog(form) {
         if (!account.val()) {
             account_label.show();
             valid = false;
-        }else{
+        } else {
             account_label.hide();
         }
         if (!password.val()) {
             password_label.show();
             valid = false;
-        }else{
+        } else {
             password_label.hide();
         }
         // 檢查二次密碼是否填寫（註冊表單才檢查）
@@ -77,13 +77,18 @@ function checkLog(form) {
             repassword_label.text('兩次密碼輸入不一致').show();
             valid = false;
         }
-        if(valid){
+        if (valid) {
             this.submit();
         }
     })
 }
 checkLog($('#loginForm'));
 checkLog($('#registerForm'));
+
+//聯絡我們確認填寫
+
+
+
 
 //購物車數量加減&刪除
 // $('.cart-content').on('click','span',function(e){
@@ -244,7 +249,7 @@ const areas = {
     '彰化縣': ['彰化市', '芬園鄉', '花壇鄉', '秀水鄉', '大村鄉', '福興鄉', '線西鄉', '和美鎮', '伸港鄉', '員林市', '社頭鄉', '永靖鄉', '埔心鄉', '溪湖鎮', '大村鄉']
 }
 
-$('#receiveAddress1').on('change', function() {
+$('#receiveAddress1').on('change', function () {
     const selectedCity = $(this).val();
     const cityAreas = areas[selectedCity] || [];
 
@@ -253,7 +258,18 @@ $('#receiveAddress1').on('change', function() {
     $('#receiveAddress2').append('<option value="" disabled selected>區域</option>');
 
     // 動態添加區域選項
-    $.each(cityAreas, function(index, area) {
+    $.each(cityAreas, function (index, area) {
         $('#receiveAddress2').append(`<option value="${area}">${area}</option>`);
     });
 });
+
+//購物車資料勾選一致
+$('#same-info').change(function () {
+    if ($(this).is(':checked')) {
+        $('#receiveName').val($('#orderName').val());
+        $('#receivePhone').val($('#orderPhone').val());
+    } else {
+        $('#receiveName').val('');
+        $('#receivePhone').val('');
+    }
+})

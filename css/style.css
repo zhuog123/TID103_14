@@ -748,7 +748,8 @@ input#get-new, input#privacy-policy{
     padding: 30px 48px;
     box-sizing: border-box;
 }
-.contact-table p{
+.contact-table label{
+    display: block;
     color: red;
     padding-bottom: 5px;
     display: none;
