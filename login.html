@@ -15,7 +15,9 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
         integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="shortcut icon" href="./img/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -66,9 +68,9 @@
                             <label for="phone-email">電郵或手機號碼為 必填*</label>
                             <input type="text" placeholder="請輸入電郵或手機號碼" id="phone-email">
                         </div>
-                        <div class="password">
+                        <div class="password becheck">
                             <label for="password">密碼為 必填*</label>
-                            <input type="password" placeholder="請輸入密碼" id="password">
+                            <input type="password" placeholder="請輸入密碼" id="password" minlength="6" maxlength="8">
                             <span class="humbleicons--eye-close show"></span>
                             <span class="mage--eye"></span>
                         </div>
@@ -161,7 +163,35 @@
             </div>
         </div>
     </footer>
+    <script>
+        function setCookie(name, value, days) {
+            const expires = new Date();
+            expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
+            document.cookie = `${name}=${encodeURIComponent(value)};expires=${expires.toUTCString()};path=/`;
+        }
 
+        function login(event) {
+            event.preventDefault(); // 阻止表單默認提交行為
+
+            // 獲取用戶輸入
+            const username = document.querySelector('#phone-email').value;
+            const password = document.querySelector('#password').value;
+
+            // 簡單驗證
+            if (username && password) {
+                setCookie('isLoggedIn', 'true', 7); // 設置登入狀態
+                setCookie('username', username, 7); // 設置用戶名
+                alert('登入成功');
+                window.location.href = '/'; // 跳轉到首頁
+            } 
+        }
+
+        // 綁定表單提交事件
+        window.onload = function () {
+            const loginForm = document.getElementById('loginForm');
+            loginForm.addEventListener('submit', login);
+        };
+    </script>
     <script src="./js/index.js"></script>
 </body>
 
