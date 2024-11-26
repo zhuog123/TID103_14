@@ -86,7 +86,11 @@ checkLog($('#loginForm'));
 checkLog($('#registerForm'));
 
 //聯絡我們確認填寫
+$('.contact-table form').submit(function (e) {
+    e.preventDefault();
 
+
+})
 
 
 
@@ -310,10 +314,32 @@ function logout() {
     document.cookie = 'isLoggedIn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
     document.cookie = 'username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
     alert('您已成功登出');
-    window.location.href = '/login.html'; 
+    window.location.href = '/login.html';
 }
 
 // 初始化
 document.addEventListener('DOMContentLoaded', function () {
     updateHeader();
+});
+
+
+//index 的輪播圖
+let mySwiper = document.querySelector('.mySwiper')
+var swiper = new Swiper(mySwiper, {
+    lazy: true,
+    rewind: true,
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
 });

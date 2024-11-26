@@ -1,0 +1,7 @@
+@import url(./reset.css);
+
+@media screen and (max-width:820px) {
+    .header-wrapper nav {
+        display: none;
+    }
+}

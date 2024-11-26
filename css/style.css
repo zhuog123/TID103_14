@@ -100,13 +100,13 @@ nav ul li span{
     top: -6px;
     right: -6px;
 }
+nav ul li
 
 /* ----- center ---- */
 main{
     background-color: #0C2557;
     overflow: hidden;
 }
-
 /* 位置指標 */
 .guid-tour-bar{
     width: 100%;
@@ -211,20 +211,43 @@ footer{
 
 
 /* ---------------- index ----------------*/
-
-.index-banner{
-    background: url('../img/banner1.jpg') center center;
-    background-size: cover;
+main {
+    background-color: #0C2557;
+    overflow: hidden;
+}
+.swiper-wrapper{
     width: 100%;
     height: 70vh;
-    animation: changeBN 12s linear infinite;
 }
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide{
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-slide img{
+    width: 100%;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+:root {
+    --swiper-theme-color: #D6C4A5;
+}
+
 /* 滑鼠移到上方時停止輪播 */
-.index-banner:hover{
+/* .index-banner:hover{
     animation-play-state: paused;
-}
+} */
 /* 替換banner圖 */
-@keyframes changeBN {
+/* @keyframes changeBN {
     0%, 30%{
         background: url('../img/banner1.jpg') center center;
         background-size: cover;
@@ -237,7 +260,7 @@ footer{
         background: url('../img/banner3.jpg') center center;
         background-size: cover;
     }
-}
+} */
 
 /* 店家公告 */
 .post{
@@ -820,7 +843,7 @@ input#get-new, input#privacy-policy{
     font-size: 64px;
     font-weight: bold;
     color: #ececec;
-    text-shadow: 5px 5px 5px black;
+    text-shadow: 1px 3px 7px #00000091;
     position: absolute;
     z-index: 3;
     top: 50%;
@@ -1565,8 +1588,6 @@ input#get-new, input#privacy-policy{
     font-weight: bold;
     font-size: 30px;
 }
-
-
 
 
 
