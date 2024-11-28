@@ -736,24 +736,57 @@ input#get-new, input#privacy-policy{
     font-weight: bold;
     color: #D6C4A5;
     margin-bottom: 45px;
+    text-align: center;
 }
 .member-level-introduction-center{
-    margin-left: 96px;
-    color: #D6C4A5;
+    color: #0C2557;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 50px;
 }
-.member-level-introduction-center article{
-    width: 360px;
-    line-height: 1.2;
-    padding-bottom: 50px;
+.memberCard{
+    width: 450px;
+    height: 250px;
+    box-sizing: border-box;
+    background-color: #ececec;
+    border-radius: 8px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
 }
-.member-level-introduction-center article:last-child{
-    padding-bottom: 0;
+.memberCard>img{
+    width: 400px;
+    position: absolute;
 }
-.member-level-introduction-center article h3{
-    text-indent: -20px;
+.memberCard>img:nth-of-type(1){
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
-.member-level-introduction-center article ul{
-    list-style: disc;
+.memberCard>img:nth-of-type(2){
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.cardIntro{
+    height: 100%;
+}
+.cardIntro h3{
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+.cardIntro ul li{
+    margin: 10px 0;
+}
+.cardImg{
+    flex-basis: 35%;
+}
+.cardImg img{
+    width: 100%;
 }
 
 /* ---------------- contact ----------------*/
@@ -1131,7 +1164,7 @@ input#get-new, input#privacy-policy{
 .wrapper-cart{
     max-width: 1200px;
     margin: 0 auto;
-    padding: 35px 0;
+    padding: 20px 0 35px 0;
     color: #0C2557;
     box-sizing: border-box;
 }
@@ -1144,7 +1177,12 @@ input#get-new, input#privacy-policy{
     align-items: center;
     color: #F9F7F3;
 }
-.cart-login-notice a,.buy-details a{
+.cart-login-notice h1{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 1rem;
+}
+.cart-login-notice a{
     display: block;
     padding: 10px 20px;
     text-align: center;
@@ -1160,7 +1198,7 @@ input#get-new, input#privacy-policy{
     box-sizing: border-box;
 }
 
-.buy-info h1,.cart-login-notice h1{
+.buy-info h1{
     font-size: 20px;
     font-weight: bold;
     padding: 1rem;
@@ -1299,6 +1337,11 @@ input#get-new, input#privacy-policy{
     text-align: center;
     background-color: #0C2557;
     color: #F9F7F3;
+    transition: all .2s linear;
+}
+.buy-details a:hover{
+    background-color: #1C93FF;
+    color: #0C2557;
 }
 .order-item, .order-sale, .order-fare, .order-total, .point-use, .point-count{
     display: flex;
