@@ -727,7 +727,7 @@ input#get-new, input#privacy-policy{
     z-index: 3;
 }
 .member-level-introduction{
-    width: 1140px;
+    max-width: 1140px;
     margin: 0 auto;
     padding: 50px 0;
 }
