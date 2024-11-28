@@ -4,4 +4,78 @@
     .header-wrapper nav {
         display: none;
     }
+
+
+
+
+
+
+    /* 會員專區 */
+    .member-banner{
+        height: 320px;
+    }
+    .member-banner h2{
+        font-size: 32px;
+    }
+    .member-banner a{
+        width: 200px;
+        height: 40px;
+        font-size: 14px;
+        line-height: 40px;
+    }
+    .memberCard{
+        width: 600px;
+        height: 350px;
+        gap: 50px;
+    }
+    .cardIntro h3{
+        padding: 30px 0;
+    }
+    .cardIntro ul li{
+        margin-bottom: 20px;
+    }
+
+
+
 }
+
+
+@media screen and (max-width:430px) {
+    
+
+
+    /* 會員專區 */
+    .member-banner{
+        height: 220px;
+    }
+    .member-banner h2{
+        font-size: 24px;
+    }
+    .member-banner a{
+        width: 180px;
+        height: 32px;
+        font-size: 12px;
+        line-height: 32px;
+    }
+    .member-level-introduction{
+        padding: 30px 0;
+    }
+    .member-level-introduction h1{
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    .memberCard{
+        width: 350px;
+        height: 200px;
+        gap: 10px;
+    }
+    .cardIntro h3{
+        padding: 10px 0;
+        font-size: 18px;
+    }
+    .cardIntro ul li{
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+}
+
