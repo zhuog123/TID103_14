@@ -150,6 +150,7 @@ main{
 .toTop i{
     line-height: 70px;
     font-size: 30px;
+    color: #0C2557;
 }
 .toTop:hover{
     opacity: 1;
@@ -1132,24 +1133,39 @@ input#get-new, input#privacy-policy{
     margin: 0 auto;
     padding: 35px 0;
     color: #0C2557;
-    display: flex;
-    gap: 20px;
     box-sizing: border-box;
 }
 
-/* --- 左側 --- */
+/* --- 上 --- */
+
+/* 已經是會員 */
+.cart-login-notice{
+    display: flex;
+    align-items: center;
+    color: #F9F7F3;
+}
+.cart-login-notice a,.buy-details a{
+    display: block;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: #F9F7F3;
+    color: #0C2557;
+}
+
+
+
 /* 商品資訊 */
 .cart-product-info{
-    width: 65%;
+    width: 100%;
     box-sizing: border-box;
 }
 
-.buy-info h1, .send-info h1{
+.buy-info h1,.cart-login-notice h1{
     font-size: 20px;
     font-weight: bold;
     padding: 1rem;
 }
-.buy-info,.send-info,.buy-details,.cart-login-notice{
+.buy-info,.send-info,.buy-details{
     background-color: #F9F7F3;
     border: 3px solid #D6C4A5;
     border-radius: 10px;
@@ -1180,13 +1196,14 @@ input#get-new, input#privacy-policy{
     padding-right: 10px;
 }
 .cart-content td img {
-    width: 50%;
+    width: 30%;
 }
 .cart-content td span, .cart-content td a {
     white-space: nowrap;
 }
 .cart-content td a{
     color: #0C2557;
+
 }
 .buy-info input{
     transform: scale(1.3);
@@ -1203,6 +1220,13 @@ input#get-new, input#privacy-policy{
 .cart-delete{   
     cursor: pointer;
 }
+.cart-delete i{
+    font-size: 20px;
+    color: #0C2557;
+}
+.cart-delete i:hover{
+    color: #D6C4A5;
+}
 .cart-content:last-child{
     border-bottom: 1px solid #D6C4A5;
 }
@@ -1214,11 +1238,22 @@ input#get-new, input#privacy-policy{
     text-align: justify;
 }
 
+/* --- 下 --- */
+.cart-order-info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
 /* 寄送資訊 */
 .send-info{
+    width: 63%;
     display: flex;
     padding: 1rem;
-    justify-content: space-between;
+}
+.send-info h1,.buy-details h1{
+    font-size: 20px;
+    font-weight: bold;
 }
 .send-info-left, .send-info-right{
     width: 50%;
@@ -1236,18 +1271,15 @@ input#get-new, input#privacy-policy{
     box-sizing: border-box;
     padding: 0 5px;
 }
-.send-info h1{
-    padding: .5rem 0;
-}
 .send-info-right h2{
-    padding: 1rem 0;
+    padding-top: 15px;
 }
 .send-info-right h2,.send-info-right h3{
     font-weight: bold;
 }
 .send-info-right h3{
     font-size: 14px;
-    padding: 12px 0;
+    padding: 15px 0;
 }
 .send-info-right p{
     font-size: 12px;
@@ -1255,26 +1287,26 @@ input#get-new, input#privacy-policy{
     text-align: justify;
 }
 
-
-/* --- 右側 --- */
-.cart-order-info{
-    width: 35%;
-}
 /* 訂單明細 */
 .buy-details{
-    padding: 10px 30px;
-    margin-bottom: 20px;
+    width: 29%;
+    padding: 1rem;
 }
-.buy-details h1,.cart-login-notice h1{
-    padding: .5rem 0;
-    font-size: 20px;
-    font-weight: bold;
-    white-space: nowrap;
+
+.buy-details a{
+    display: block;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: #0C2557;
+    color: #F9F7F3;
 }
 .order-item, .order-sale, .order-fare, .order-total, .point-use, .point-count{
     display: flex;
     justify-content: space-between;
-    padding: 15px 0;
+    padding: 10px 0;
+}
+.order-item{
+    padding-top: 1rem;
 }
 .point-use, .point-count, .order-point h3{
     padding: 5px 0;
@@ -1288,37 +1320,24 @@ input#get-new, input#privacy-policy{
 .order-point{
     background-color: #D6C4A5;
     padding: 10px;
+    margin: 10px 0;
 }
-.buy-details a, .cart-login-notice a{
-    display: block;
-    padding: 10px 0;
-    text-align: center;
-    background-color: #0C2557;
-    color: #F9F7F3;
-    margin: 20px 0;
-}
-/* 還不是會員 */
-.cart-login-notice{
-    padding: 10px 30px;
-}
-.cart-login-notice ul{
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-.cart-login-notice ul li{
-    line-height: 1.3;
-}
-.cart-login-notice i{
-    font-weight: bold;
-}
-.cart-login-notice2 a{
-    
-}
+
 
 /* ---------------- cart2 ----------------*/
 
 .wrapper-cart2{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 35px 0;
+    color: #0C2557;
+    display: flex;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+
+.wrapper-cart2-center{
     box-sizing: border-box;
     width: 100%;
     padding: 1.5rem;
@@ -1326,6 +1345,7 @@ input#get-new, input#privacy-policy{
     border: 3px solid #D6C4A5;
     border-radius: 10px;
 }
+
 .wrapper-cart-contain{
     box-sizing: border-box;
     width: 100%;
@@ -1410,6 +1430,37 @@ input#get-new, input#privacy-policy{
 }
 .cart-check-item thead th:nth-of-type(3),.cart-check-item tbody td:nth-of-type(3),.cart-check-item tfoot td:nth-of-type(3){
     text-align: right;
+}
+
+.cart-login-notice2{
+    margin-top: 70px;
+}
+
+.cart-login-notice2 h1{
+    padding: .5rem 0;
+    font-size: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.cart-login-notice2 ul{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.cart-login-notice2 ul li{
+    line-height: 1.3;
+}
+.cart-login-notice2 i{
+    font-weight: bold;
+}
+.cart-login-notice2 a{
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #F9F7F3;
+    color: #0C2557;
+    margin: 20px 0;
 }
 
 .cart-step-button{

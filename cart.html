@@ -59,51 +59,63 @@
 
     <main>
         <div class="wrapper-cart">
-            <section class="cart-product-info">
-                <div class="buy-info">
-                    <h1>商品資訊</h1>
-
-                    <table>
-                        <thead>
-                            <tr class="cart-title">
-                                <th><input type="checkbox" checked></th>
-                                <th>商品</th>
-                                <th>品名</th>
-                                <th>單一售價</th>
-                                <th>數量</th>
-                                <th>小計</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr class="cart-content">
-                                <td><input type="checkbox" checked></td>
-                                <td><a href="#"><img src="./img/p11.jpg" alt="酒漬葡萄超厚層布丁塔"></a></td>
-                                <td><a href="#">酒漬葡萄超厚層布丁塔</a></td>
-                                <td>NT $ <span class="cart-one">625</span></td>
-                                <td><span class="cart-reduce">–</span><span class="cart-number">1</span><span
-                                        class="cart-plus">+</span></td>
-                                <td>NT $ <span class="cart-count">625</span></td>
-                                <td><span class="cart-delete">刪除</span></td>
-                            </tr>
-                            <tr class="cart-content">
-                                <td><input type="checkbox" checked></td>
-                                <td><a href="#"><img src="./img/p3.jpg" alt="蘋果千層酥派"></a></td>
-                                <td><a href="#">蘋果千層酥派</a></td>
-                                <td>NT $ <span span class="cart-one">500</span></td>
-                                <td><span class="cart-reduce">–</span><span class="cart-number">1</span><span
-                                        class="cart-plus">+</span></td>
-                                <td>NT $ <span class="cart-count">500</span></td>
-                                <td><span class="cart-delete">刪除</span></td>
-                            </tr>
-                        </tbody>
 
 
-                    </table>
-                    <p>*同品項不同尺寸會依比例切分，例生巧克力塔/十吋 可切分成4個 生巧克力塔/單份．可購量也將依比例換算
-                        例如尚可購 2個生巧克力塔/十吋，相當於8個生巧克力塔/單份，以及 1個生巧克力塔/十吋 和 4個 生巧克力塔/單份</p>
-                </div>
+            <div class="cart-login-notice">
+                <h1>已經是會員？登入後可以更方便管理訂單！</h1>
+                <a href="./login.html">前往登入 / 註冊會員</a>
+            </div>
+
+
+            <div class="buy-info">
+                <h1>購物車</h1>
+
+                <table>
+                    <thead>
+                        <tr class="cart-title">
+                            <th><input type="checkbox" checked></th>
+                            <th>商品</th>
+                            <th>品名</th>
+                            <!-- <th>優惠</th> -->
+                            <th>單一售價</th>
+                            <th>數量</th>
+                            <th>小計</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr class="cart-content">
+                            <td><input type="checkbox" checked></td>
+                            <td><a href="#"><img src="./img/p11.jpg" alt="酒漬葡萄超厚層布丁塔"></a></td>
+                            <td><a href="#">酒漬葡萄超厚層布丁塔</a></td>
+                            <!-- <td></td> -->
+                            <td>NT $ <span class="cart-one">625</span></td>
+                            <td><span class="cart-reduce">–</span><span class="cart-number">1</span><span
+                                    class="cart-plus">+</span></td>
+                            <td>NT $ <span class="cart-count">625</span></td>
+                            <td><span class="cart-delete"><i class="fa-solid fa-trash-can"></i></span></td>
+                        </tr>
+                        <tr class="cart-content">
+                            <td><input type="checkbox" checked></td>
+                            <td><a href="#"><img src="./img/p3.jpg" alt="蘋果千層酥派"></a></td>
+                            <td><a href="#">蘋果千層酥派</a></td>
+                            <!-- <td></td> -->
+                            <td>NT $ <span span class="cart-one">500</span></td>
+                            <td><span class="cart-reduce">–</span><span class="cart-number">1</span><span
+                                    class="cart-plus">+</span></td>
+                            <td>NT $ <span class="cart-count">500</span></td>
+                            <td><span class="cart-delete"><i class="fa-solid fa-trash-can"></i></span></td>
+                        </tr>
+                    </tbody>
+
+
+                </table>
+                <p>*同品項不同尺寸會依比例切分，例生巧克力塔/十吋 可切分成4個 生巧克力塔/單份．可購量也將依比例換算
+                    例如尚可購 2個生巧克力塔/十吋，相當於8個生巧克力塔/單份，以及 1個生巧克力塔/十吋 和 4個 生巧克力塔/單份</p>
+            </div>
+
+            <section class="cart-order-info">
                 <div class="send-info">
                     <div class="send-info-left">
                         <h1>寄送資訊</h1>
@@ -122,7 +134,7 @@
                             <option value="14:00 - 18:00">14:00 - 18:00</option>
                         </select>
                     </div>
-                    
+
                     <div class="send-info-right">
                         <h2>取貨方式資訊</h2>
                         <h3>自取</h3>
@@ -135,11 +147,6 @@
                     </div>
 
                 </div>
-
-            </section>
-
-
-            <section class="cart-order-info">
                 <div class="buy-details">
                     <h1>訂單明細</h1>
                     <div class="order-item">
@@ -171,15 +178,7 @@
                     </div>
                     <a href="./cart2.html">訪客結帳</a>
                 </div>
-                <div class="cart-login-notice">
-                    <h1>還不是會員嗎？立即加入享有以下優惠：</h1>
-                    <ul>
-                        <li><i>累積點數：</i>消費可累積點數，一元累積一點，讓每一筆購物更有價值。</li>
-                        <li><i>限時限定優惠：</i>隨時追蹤最新資訊，第一時間獲知限時優惠，不再錯過任何好康！</li>
-                        <li>現在快速加入，立即享受優惠！</li>
-                    </ul>
-                    <a href="./login.html">前往登入 / 註冊會員</a>
-                </div>
+
             </section>
         </div>
         <div class="toTop">
