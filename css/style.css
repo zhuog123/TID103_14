@@ -181,8 +181,8 @@ footer{
 .footer-info table thead tr th{
     font-weight: bold;
     text-align: left;
+    font-size: 20px;
 }
-
 
 .copyright{
     background-color: #F9F7F3;
@@ -682,7 +682,7 @@ label>a{
     text-decoration: underline;
     color: #1C93FF;
 }
-#privacy-policy{
+#get-new{
     margin-bottom: 30px;
 }
 input#get-new, input#privacy-policy{
@@ -1311,6 +1311,9 @@ input#get-new, input#privacy-policy{
 }
 .cart-login-notice i{
     font-weight: bold;
+}
+.cart-login-notice2 a{
+    
 }
 
 /* ---------------- cart2 ----------------*/
