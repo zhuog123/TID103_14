@@ -21,7 +21,11 @@
 
 
     /* 會員專區 */
-    .member-banner{
+    .member-level-introduction-center{
+        column-gap: 50px;
+        justify-content: center;
+    }
+    /* .member-banner{
         height: 320px;
     }
     .member-banner h2{
@@ -43,7 +47,7 @@
     }
     .cardIntro ul li{
         margin-bottom: 20px;
-    }
+    } */
 
 }
 
@@ -53,7 +57,7 @@
 
 
     /* 會員專區 */
-    .member-banner{
+    /* .member-banner{
         height: 220px;
     }
     .member-banner h2{
@@ -84,6 +88,6 @@
     .cardIntro ul li{
         font-size: 12px;
         margin-bottom: 10px;
-    }
+    } */
 }
 
