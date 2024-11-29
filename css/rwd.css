@@ -1,9 +1,19 @@
 @import url(./reset.css);
 
-@media screen and (max-width:820px) {
+
+@media screen and (max-width:1200px) {
+    /* header */
     .header-wrapper nav {
         display: none;
     }
+}
+
+
+
+
+@media screen and (max-width:820px) {
+
+    
 
 
 
@@ -34,8 +44,6 @@
     .cardIntro ul li{
         margin-bottom: 20px;
     }
-
-
 
 }
 
