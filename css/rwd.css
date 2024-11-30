@@ -1,10 +1,30 @@
 @import url(./reset.css);
 
+@media screen and (max-width:1350px) {
+    /* header */
+    .header-wrapper{
+        max-width: 1200px;
+    }
+}
 
 @media screen and (max-width:1200px) {
     /* header */
-    .header-wrapper nav {
+    .header-wrapper{
+
+        /* justify-content: flex-start; */
+        /* gap: 5%; */
+    }
+    .header-wrapper .logo{
+        margin-left: 3vw;
+    }
+    .header-wrapper .nav-large {
         display: none;
+    }
+    .header-wrapper nav.nav-small{
+        display: inline-block;
+    }
+    .header-wrapper nav ul li{
+        margin-left: 50px;
     }
 }
 
@@ -13,9 +33,20 @@
 
 @media screen and (max-width:820px) {
 
-    
-
-
+    /* header */
+    .header-wrapper .logo{
+        flex: 0 1 260px;
+    }
+    .header-wrapper{
+        padding: 6px 0;
+    }
+    .header-wrapper nav ul li{
+        margin-left: 30px;
+    }
+    /* 首頁 bn */
+    .swiper-wrapper{
+        height: 65vh;
+    }
 
 
 
@@ -25,69 +56,50 @@
         column-gap: 50px;
         justify-content: center;
     }
-    /* .member-banner{
-        height: 320px;
+    .swiper-button-next:after, .swiper-button-prev:after{
+        font-size: 30px;
     }
-    .member-banner h2{
-        font-size: 32px;
-    }
-    .member-banner a{
-        width: 200px;
-        height: 40px;
-        font-size: 14px;
-        line-height: 40px;
-    }
-    .memberCard{
-        width: 600px;
-        height: 350px;
-        gap: 50px;
-    }
-    .cardIntro h3{
-        padding: 30px 0;
-    }
-    .cardIntro ul li{
-        margin-bottom: 20px;
-    } */
+    
 
 }
 
 
 @media screen and (max-width:430px) {
-    
 
-
-    /* 會員專區 */
-    /* .member-banner{
-        height: 220px;
+    /* header */
+    .header-wrapper{
+        flex-wrap: nowrap;
+        padding: 3px 0;
     }
-    .member-banner h2{
+    .header-wrapper .logo{
+        flex: 0 1 140px;
+    }
+    .header-wrapper .search-bar{
+        width: 120px;
+    }
+    .header-wrapper input{
+        height: 24px;
+    }
+    .header-wrapper nav ul li{
+        margin-left: 20px;
+    }
+    nav ul li i {
+        font-size: 1rem;
+    }
+
+    /* 首頁 bn */
+    .swiper-wrapper{
+        height: 40vh;
+    }
+    .swiper-button-next:after, .swiper-button-prev:after{
         font-size: 24px;
     }
-    .member-banner a{
-        width: 180px;
-        height: 32px;
-        font-size: 12px;
-        line-height: 32px;
+    .swiper-pagination-bullet{
+        width: 6px;
+        height: 6px;
     }
-    .member-level-introduction{
-        padding: 30px 0;
-    }
-    .member-level-introduction h1{
-        font-size: 20px;
-        margin-bottom: 30px;
-    }
-    .memberCard{
-        width: 350px;
-        height: 200px;
-        gap: 10px;
-    }
-    .cardIntro h3{
-        padding: 10px 0;
-        font-size: 18px;
-    }
-    .cardIntro ul li{
-        font-size: 12px;
-        margin-bottom: 10px;
-    } */
-}
+    .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
 
+    }
+
+}

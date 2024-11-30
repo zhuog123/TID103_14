@@ -294,35 +294,6 @@ function getCookie(name) {
     return null;
 }
 
-// 檢查登入狀態並更新 header
-function updateHeader() {
-    const isLoggedIn = getCookie('isLoggedIn');
-    const username = getCookie('username');
-
-    const loginLink = document.querySelector('header nav ul li:nth-child(5) a'); // 鎖定「登入/註冊」連結
-    if (isLoggedIn === 'true' && username) {
-        // 如果已登入，更新連結為「登出」
-        loginLink.textContent = '登出';
-        loginLink.href = '#'; // 清除連結跳轉功能
-        loginLink.onclick = logout; // 綁定登出功能
-    }
-}
-
-// 登出
-function logout() {
-    // 清除登入相關 Cookie
-    document.cookie = 'isLoggedIn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-    document.cookie = 'username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-    alert('您已成功登出');
-    window.location.href = '/login.html';
-}
-
-// 初始化
-document.addEventListener('DOMContentLoaded', function () {
-    updateHeader();
-});
-
-
 //index 的輪播圖
 let mySwiper = document.querySelector('.mySwiper')
 var swiper = new Swiper(mySwiper, {
@@ -343,3 +314,81 @@ var swiper = new Swiper(mySwiper, {
         prevEl: ".swiper-button-prev",
     },
 });
+
+//漢堡選單點擊展開
+$('.fa-bars').click(function(){
+    $('.nav-list').fadeIn();
+    $('.fa-xmark').css({
+        transition: 'transform 1s ease',
+        transform: 'rotate(180deg)'
+    })
+    $('.menu-wrapper').animate({
+        left: 0,
+    })
+    
+})
+//點擊遮罩或叉叉收起清單
+function closeList(item){
+    item.click(function(){
+        $('.fa-xmark').css({
+            transform: 'rotate(-180deg)'
+        })
+        $('.menu-wrapper').animate({
+            left: '-80vw',
+        },function(){
+            $('.nav-list').fadeOut()
+        })
+    })
+}
+closeList($('.fa-xmark'));
+closeList($('.nav-cover'));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // 檢查登入狀態並更新 header
+// function updateHeader() {
+//     const isLoggedIn = getCookie('isLoggedIn');
+//     const username = getCookie('username');
+
+//     const loginLink = document.querySelector('header nav ul li:nth-child(5) a'); // 鎖定「登入/註冊」連結
+//     if (isLoggedIn === 'true' && username) {
+//         // 如果已登入，更新連結為「登出」
+//         loginLink.textContent = '登出';
+//         loginLink.href = '#'; // 清除連結跳轉功能
+//         loginLink.onclick = logout; // 綁定登出功能
+//     }
+// }
+
+// // 登出
+// function logout() {
+//     // 清除登入相關 Cookie
+//     document.cookie = 'isLoggedIn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+//     document.cookie = 'username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+//     alert('您已成功登出');
+//     window.location.href = '/login.html';
+// }
+
+// // 初始化
+// document.addEventListener('DOMContentLoaded', function () {
+//     updateHeader();
+// });

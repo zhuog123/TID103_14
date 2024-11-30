@@ -15,17 +15,18 @@ header{
     box-shadow: 0 3px 6px rgb(203, 203, 203);
     position: sticky;
     top: 0;
-    z-index: 5;
+    z-index: 50;
 }
 
 .header-wrapper{
-    max-width: 1200px;
+    max-width: 1320px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     /* outline: 1px solid red;  */  /* 最後刪除 */
-    flex-wrap: wrap;
+    font-size: 0;
+    padding: 10px 0;
 }
 
 .header-wrapper .logo{
@@ -46,9 +47,11 @@ header{
     outline: none;
     border: 1px solid #0C2557;
     border-radius: 3px;
-    padding: 0 44px 0 20px;
+    /* padding: 0 44px 0 20px; */
+    padding: 0 18% 0 8%;
 }
 .search-bar img{
+    width: 10%;
     position: absolute;
     right: 10px;
     top: 50%;
@@ -65,12 +68,16 @@ header{
     display: flex;
     justify-content: end;
     align-items: center;
-
+    font-size: 1rem;
     /* border: 1px solid #333; */   /* 最後刪除 */
 }
 .header-wrapper nav ul li{
     margin-left: 20px;
     position: relative;
+    cursor: pointer;
+}
+.header-wrapper nav ul li:hover{
+    color: #D6C4A5;
 }
 .header-wrapper nav ul li a{
     text-decoration: none;
@@ -83,7 +90,6 @@ header{
     background-color: #D6C4A5;
     color: #0C2557;
 }
-
 nav ul li i{
     font-size: 1.5rem;
 }
@@ -100,7 +106,78 @@ nav ul li span{
     top: -6px;
     right: -6px;
 }
-nav ul li
+
+.header-wrapper nav.nav-small{
+    display: none;
+    margin-right: 3vw;
+}
+nav.nav-small i{
+    
+}
+/* 縮小後的清單 */
+.nav-list{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    font-size: 1rem;
+    color: #0C2557;
+    display: none;
+}
+/* 遮罩 */
+.nav-list .nav-cover{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .3);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+}
+/* 清單本體 */
+.nav-list .menu-wrapper{
+    width: 80vw;
+    height: 100vh;
+    background-color: #fdfdfd;
+    position: absolute;
+    left: -80vw;
+    top: 0;
+    z-index: 5;
+}
+/* 清單頭部 */
+.menu-wrapper .menu-header{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e4e4e4;
+}
+.menu-header a{
+    width: 40%;
+}
+.menu-header a img{
+    width: 100%;
+}
+.menu-header i{
+    font-size: 2rem;
+}
+/* 清單核心 */
+.nav-list .menu-wrapper ul{
+    flex-direction: column;
+}
+.nav-list .menu-wrapper ul li{
+    box-sizing: border-box;
+    width: 100%;
+    border-bottom: 1px solid #e4e4e4;
+    margin-left: 0;
+}
+.menu-wrapper ul li a{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1.5rem;
+    display: block;
+}
 
 /* ----- center ---- */
 main{
@@ -1706,18 +1783,3 @@ input#get-new, input#privacy-policy{
     font-weight: bold;
     font-size: 30px;
 }
-
-
-
-/* --------- RWD --------- */
-/* @media screen and (max-width:1400px) {
-    .header-wrapper{
-        max-width: 1320px;
-    }
-}
-
-@media (width <= 1320) {
-    .header-wrapper{
-        max-width: 1200px;
-    }
-} */
