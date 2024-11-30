@@ -17,17 +17,26 @@
     .header-wrapper .logo{
         margin-left: 3vw;
     }
+    .header-wrapper nav{
+        margin-right: 3vw;
+    }
+    .header-wrapper .nav-large {
+        /* display: none; */
+    }
+    /* .header-wrapper nav.nav-small{
+        display: inline-block;
+    } */
+}
+
+@media screen and (max-width:1100px) {
+    /* header */
     .header-wrapper .nav-large {
         display: none;
     }
     .header-wrapper nav.nav-small{
         display: inline-block;
     }
-    .header-wrapper nav ul li{
-        margin-left: 50px;
-    }
 }
-
 
 
 
@@ -38,14 +47,14 @@
         flex: 0 1 260px;
     }
     .header-wrapper{
-        padding: 6px 0;
+        padding: 10px 0;
     }
-    .header-wrapper nav ul li{
+    /* .header-wrapper nav ul li{
         margin-left: 30px;
-    }
+    } */
     /* 首頁 bn */
     .swiper-wrapper{
-        height: 65vh;
+        height: 40vh;
     }
 
 
@@ -69,13 +78,10 @@
     /* header */
     .header-wrapper{
         flex-wrap: nowrap;
-        padding: 3px 0;
+        padding: 8px 0;
     }
     .header-wrapper .logo{
-        flex: 0 1 140px;
-    }
-    .header-wrapper .search-bar{
-        width: 120px;
+        flex: 0 1 170px;
     }
     .header-wrapper input{
         height: 24px;
@@ -89,7 +95,7 @@
 
     /* 首頁 bn */
     .swiper-wrapper{
-        height: 40vh;
+        height: 28vh;
     }
     .swiper-button-next:after, .swiper-button-prev:after{
         font-size: 24px;

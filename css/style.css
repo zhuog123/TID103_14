@@ -36,7 +36,7 @@ header{
     width: 100%;
 }
 
-.header-wrapper .search-bar{
+/* .header-wrapper .search-bar{
     position: relative;
     width: 240px;
 }
@@ -47,7 +47,6 @@ header{
     outline: none;
     border: 1px solid #0C2557;
     border-radius: 3px;
-    /* padding: 0 44px 0 20px; */
     padding: 0 18% 0 8%;
 }
 .search-bar img{
@@ -57,7 +56,7 @@ header{
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-}
+} */
 
 /* Nav */
 .header-wrapper nav{
@@ -72,7 +71,7 @@ header{
     /* border: 1px solid #333; */   /* 最後刪除 */
 }
 .header-wrapper nav ul li{
-    margin-left: 20px;
+    margin-left: 50px;  /* 原先是 20 */
     position: relative;
     cursor: pointer;
 }
@@ -109,7 +108,7 @@ nav ul li span{
 
 .header-wrapper nav.nav-small{
     display: none;
-    margin-right: 3vw;
+    /* margin-right: 3vw; */
 }
 nav.nav-small i{
     
@@ -154,7 +153,7 @@ nav.nav-small i{
     border-bottom: 1px solid #e4e4e4;
 }
 .menu-header a{
-    width: 40%;
+    width: 60%;
 }
 .menu-header a img{
     width: 100%;
