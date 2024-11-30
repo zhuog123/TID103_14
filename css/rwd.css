@@ -5,6 +5,10 @@
     .header-wrapper{
         max-width: 1200px;
     }
+    /* 麵包屑 */
+    .guid-tour-bar-center{
+        max-width: 1200px;
+    }
 }
 
 @media screen and (max-width:1200px) {
@@ -14,6 +18,10 @@
     }
     .header-wrapper nav{
         margin-right: 3vw;
+    }
+    /* 麵包屑 */
+    .guid-tour-bar-center{
+        margin: 0 3vw;
     }
 }
 
@@ -89,6 +97,11 @@
     .swiper-pagination-bullet{
         width: 6px;
         height: 6px;
+    }
+
+    /* 麵包屑 */
+    .guid-tour-bar{
+        height: 30px;
     }
 
 }
