@@ -18,6 +18,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="shortcut icon" href="./img/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/rwd.css">
 </head>
 
 <body>
@@ -29,11 +30,11 @@
                     <img src="./img/logo.svg" alt="logo">
                 </a>
             </div>
-            <div class="search-bar">
-                <input type="text" placeholder="搜尋">
-                <img src="./img/search.svg" alt="">
-            </div>
-            <nav>
+            <!-- <div class="search-bar">
+                <input type="text" placeholder="找商品">
+                <img src="./img/search.svg" alt="search">
+            </div> -->
+            <nav class="nav-large">
                 <ul>
                     <li><a href="./about.html">關於我們</a></li>
                     <li><a href="./product.html">商品資訊</a></li>
@@ -42,6 +43,35 @@
                     <li><a href="./login.html">登入/註冊</a></li>
                     <li><a href="./cart.html"><i class="fa-solid fa-cart-shopping"></i><span>2</span></a></li>
                 </ul>
+            </nav>
+            <nav class="nav-small">
+                <ul>
+                    <li><a href="./login.html"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="./cart.html"><i class="fa-solid fa-cart-shopping"></i><span>2</span></a></li>
+                    <li><i class="fa-solid fa-bars"></i></li>
+                </ul>
+                <!-- 縮小後的清單 -->
+                <div class="nav-list">
+                    <!-- 遮罩 -->
+                    <div class="nav-cover"></div>
+                    <!-- 清單本體 -->
+                    <div class="menu-wrapper">
+                        <!-- 清單頭部 -->
+                        <div class="menu-header">
+                            <a href="index.html">
+                                <img src="./img/logo.svg" alt="logo">
+                            </a>
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                        <!-- 清單核心 -->
+                        <ul>
+                            <li><a href="./about.html">關於我們</a></li>
+                            <li><a href="./product.html">商品資訊</a></li>
+                            <li><a href="./member_logut.html">會員專區</a></li>
+                            <li><a href="./contact.html">聯絡我們</a></li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
@@ -86,11 +116,12 @@
                         </select>
                     </li>
                     <li>
-                        <select name="" id="" class="perPageShow-selector">
+                        <!-- <select name="" id="" class="perPageShow-selector">
                             <option value="">每頁 12 個</option>
                             <option value="">每頁 16 個</option>
                             <option value="">每頁 20 個</option>
-                        </select>
+                        </select> -->
+                        <input type="text" placeholder="找商品">
                     </li>
                 </ul>
 
@@ -303,7 +334,7 @@
             </div>
         </div>
     </footer>
-    <script src="./js/index.js"></script>
+    <script src="./js/public.js"></script>
 </body>
 
 </html>

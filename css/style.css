@@ -108,10 +108,9 @@ nav ul li span{
 
 .header-wrapper nav.nav-small{
     display: none;
-    /* margin-right: 3vw; */
 }
 nav.nav-small i{
-    
+    color: #0C2557;
 }
 /* 縮小後的清單 */
 .nav-list{
@@ -1102,6 +1101,13 @@ input#get-new, input#privacy-policy{
     width: 100%;
     height: 42px;
     cursor: pointer;
+    outline: none;
+    padding: 0 10px;
+}
+.selector li input{
+    box-sizing: border-box;
+    width: 100%;
+    height: 42px;
     outline: none;
     padding: 0 10px;
 }

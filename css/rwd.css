@@ -9,23 +9,12 @@
 
 @media screen and (max-width:1200px) {
     /* header */
-    .header-wrapper{
-
-        /* justify-content: flex-start; */
-        /* gap: 5%; */
-    }
     .header-wrapper .logo{
         margin-left: 3vw;
     }
     .header-wrapper nav{
         margin-right: 3vw;
     }
-    .header-wrapper .nav-large {
-        /* display: none; */
-    }
-    /* .header-wrapper nav.nav-small{
-        display: inline-block;
-    } */
 }
 
 @media screen and (max-width:1100px) {
@@ -49,9 +38,6 @@
     .header-wrapper{
         padding: 10px 0;
     }
-    /* .header-wrapper nav ul li{
-        margin-left: 30px;
-    } */
     /* 首頁 bn */
     .swiper-wrapper{
         height: 40vh;
@@ -103,9 +89,6 @@
     .swiper-pagination-bullet{
         width: 6px;
         height: 6px;
-    }
-    .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
-
     }
 
 }
