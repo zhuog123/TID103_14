@@ -604,26 +604,29 @@ main {
 }
 .login-box{
     width: 520px;
-    background-color: #fff;
+    /* background-color: #fff; */
+    background-color: #0C2557;
     margin: 0 auto;
-    border: 3px solid #D6C4A5;
+    /* border: 3px solid #D6C4A5; */
     border-radius: 50px;
-    padding: 30px 0;
+    /* padding: 30px 0; */
     box-sizing: border-box;
 }
 .form-box{
     width: 420px;
     margin: 0 auto;
-    color: #0C2557;
+    /* color: #0C2557; */
+    color: #D6C4A5;
 }
 .login-box h1{
-    font-size: 36px;
+    /* font-size: 36px; */
+    font-size: 32px;
     font-weight: bold;
     line-height: 60px;
     margin-bottom: 20px;
 }
 .form-box form>div{
-    border-bottom: 1px solid #999;
+    border-bottom: 1px solid #D6C4A5;
     margin-top: 10px;
     margin-bottom: 15px;
 }
@@ -631,25 +634,30 @@ main {
     position: relative;
 }
 .form-box form>div>label{
-    color: red;
+    color: #FF4C4C;
     display: none;
+    font-size: 14px;
+}
+.form-box form>label{
     font-size: 14px;
 }
 .form-box form>div>input{
     display: block;
-    width: 360px;
+    width: 100%;
     height: 45px;
     outline: none;
     border: 0px solid transparent;
     padding-left: 20px;
+    padding-right: 20px;
     box-sizing: border-box;
-    box-sizing: border-box;
+    background-color: #0C2557;
+    color: #fff;
 }
 .form-box form input::placeholder{
-    color: #1C93FF;
+    color: #9E8966;
 }
 .form-box form .forget{
-    color: #1C93FF;
+    color: #D3EEDE;
     display: inline-block;
     line-height: 55px;
     text-indent: 20px;
@@ -657,23 +665,26 @@ main {
 }
 .form-box form .forget:hover{
     text-decoration: underline;
-    color: #0C2557;
+    color: #004799;
 }
 .form-box form button{
     width: 420px;
     height: 48px;
     font-size: 20px;
     font-weight: bold;
-    color: #fff;
-    background-color: #0C2557;
+    /* color: #fff; */
+    color: #0C2557;
+    /* background-color: #0C2557; */
+    background-color: #D6C4A5;
     border: 0px solid transparent;
     border-radius: 5px;
     cursor: pointer;
     transition: all .1s .1s linear;
 }
 .form-box form button:hover{
-    background-color: #1C93FF;
-    color: #0C2557;
+    /* background-color: #1C93FF; */
+    background-color: #9E8966;
+    color: #F9F7F3;
 }
 
 /* password 的 icon */
@@ -700,7 +711,8 @@ main {
     display: none;
 }
 .humbleicons--eye-close:hover{
-    color: #1C93FF;
+    /* color: #1C93FF; */
+    color: #9E8966;
 }
 .mage--eye{
     display: none;
@@ -725,7 +737,8 @@ main {
     display: inline-block;
 }
 .mage--eye:hover{
-    color: #1C93FF;
+    /* color: #1C93FF; */
+    color: #9E8966;
 }
 
 .another{
@@ -755,9 +768,10 @@ main {
     height: 48px;
     font-size: 20px;
     font-weight: bold;
-    color: #0C2557;
+    /* color: #0C2557; */
+   color: #D6C4A5;
     background-color: transparent;
-    border: 1px solid #0C2557;
+    border: 1px solid #D6C4A5;
     border-radius: 5px;
     transition: all .1s .1s linear;
     margin-bottom: 20px;
@@ -773,7 +787,8 @@ input[type='checkbox']{
 }
 label>a{
     text-decoration: underline;
-    color: #1C93FF;
+    /* color: #1C93FF; */
+    color: #F9F7F3;
 }
 #get-new{
     margin-bottom: 30px;
