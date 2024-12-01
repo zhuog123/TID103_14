@@ -100,6 +100,7 @@
     /* footer */
     .footer-text{
         flex-direction: column;
+        margin: 40px auto;
     }
     .footer-info table:nth-of-type(1){
         width: 50%;
@@ -218,7 +219,20 @@
     }
     .footer-info table td{
         font-size: 0.8rem;
+        white-space: nowrap;
     }
+
+    /* copyright */
+    .copyright-text{
+        max-width: 90vw;
+    }
+    .copyright-text{
+        text-align: left;
+    }
+    .copyright-text-left p:nth-of-type(1) {
+        text-indent: 0;
+    }
+
 }
 
 
