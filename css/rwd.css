@@ -172,9 +172,12 @@
     .post ul {
         gap: 20px;
     }
-
+    .post ul li{
+        flex: 0 0 80%;
+    }
     .post ul li a {
-        width: 320px;
+        /* width: 320px; */
+        width: 100%;
     }
 
     /* 首頁-當月首推 */
@@ -206,17 +209,19 @@
 
     /* 精選專區 */
     .index-feature ul {
+        max-width: 90vw;
         gap: 20px;
         justify-content: flex-start;
         overflow: hidden;
+
     }
 
     .index-feature ul li {
-        width: 400px;
+        flex: 0 0 80%;
     }
 
     .index-feature ul li a:nth-child(1) {
-        width: 400px;
+        width: 100%;
     }
 }
 
