@@ -213,23 +213,26 @@ main{
     bottom: 8vh;
     right: 3vw;
     z-index: 5;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     border-radius: 99rem;
     text-align: center;
-    background-color: #fff;
-    opacity: .7;
+    border: 2px solid #F4E9D5;
     transition: all .1s ease;
     cursor: pointer;
     display: none;
+    transition: all .3s ease-in;
 }
 .toTop i{
-    line-height: 70px;
-    font-size: 30px;
-    color: #0C2557;
+    line-height: 50px;
+    font-size: 40px;
+    color: #F4E9D5;
 }
 .toTop:hover{
-    opacity: 1;
+    border-color: #9E8966;
+}
+.toTop:hover i{
+    color: #9E8966;
 }
 
 
