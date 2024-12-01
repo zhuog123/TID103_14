@@ -308,3 +308,11 @@ $('#same-info').change(function () {
         $('#receivePhone').val('');
     }
 })
+
+
+//copyright 跑馬燈
+$(document).ready(function(){
+    $('.copyright-text-left p').css({
+        // transform:'translateX(-50px)'
+    })
+})
