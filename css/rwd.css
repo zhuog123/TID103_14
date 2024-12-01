@@ -91,11 +91,16 @@
 }
 
 @media screen and (max-width:912px) {
-
     /* 首頁-當月首推 */
     .product-bottom>li>a {
         line-height: 1.6;
     }
+    /* .product-bottom-img:hover a{
+        opacity: 0;
+    }
+    .product-bottom-img:hover span{
+        opacity: 0;
+    } */
 
     /* footer */
     .footer-text{
@@ -212,7 +217,6 @@
         width: 100%;
     }
 
-
     /* footer */
     .footer-text{
         width: 80vw;
@@ -233,6 +237,26 @@
         text-indent: 0;
     }
 
+
+}
+
+@media screen and (max-width:540px) {
+    /* login */
+    .center{
+        padding: 32px 3vw;
+    }
+    .login-box{
+        width: 100%;
+    }
+    .form-box{
+        width: 90%;
+    }
+    .form-box form button{
+        width: 100%;
+    }
+    .not-member a{
+        width: 100%;
+    }
 }
 
 
