@@ -423,6 +423,16 @@ main {
 .product-top a:hover{
     color: #1863DD;
 }
+.product-top-small{
+    display: none;
+    color: #D6C4A5;
+    font-size: 20px;
+    width: 110px;
+    margin: 0px auto;
+    padding: 25px 0;
+    cursor: pointer;
+    text-align: center;
+}
 .product-bottom{
     display: flex;
     flex-wrap: wrap;

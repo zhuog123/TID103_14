@@ -55,6 +55,14 @@
     .post ul li a{
         width: 200px;
     }
+
+    /* 精選類別 */
+    .index-feature ul{
+        max-width: 720px;
+    }
+    .index-feature ul li{
+        width: 225px;
+    }
 }
 
 @media screen and (max-width:1024px) {
@@ -125,6 +133,39 @@
     .post ul li a{
         width: 320px;
     }
+    /* 首頁-當月首推 */
+    .recommend{
+        padding-right: 0;
+    }
+    .recommend-product{
+        padding-right: 3vw;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .recommend-image{
+        display: none;
+    }
+    .product-top{
+        justify-content: center;
+    }
+    .product-top-large{
+        display: none;
+    }
+    .product-top-small{
+        display: block;
+    }
+    /* 精選專區 */
+    .index-feature ul{
+        gap: 20px;
+        justify-content: flex-start;
+        overflow: hidden;
+    }
+    .index-feature ul li{
+        width: 400px;
+    }
+    .index-feature ul li a:nth-child(1){
+        width: 400px;
+    }
 }
 
 
@@ -164,6 +205,14 @@
     /* 店家公告 */
     .post h1{
         font-size: 32px;
+    }
+
+    /* 首頁-當月首推 */
+    .product-bottom{
+        justify-content: space-between;
+    }
+    .product-bottom li{
+        width: calc((100% - 20px) / 2);
     }
 
 
