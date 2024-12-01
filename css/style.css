@@ -244,13 +244,13 @@ footer{
 }
 .footer-text{
     display: flex;
-    justify-content: space-between;
     width: 70vw;
     margin: 60px auto;
+    gap: 5vw;
 }
 .footer-info table{
-    width: 45%;
-    line-height: 24px;
+    line-height: 1.5rem;
+    flex: 1 1 auto;
 }
 .footer-info table a{
     color: #0C2557;
@@ -258,7 +258,8 @@ footer{
 .footer-info table thead tr th{
     font-weight: bold;
     text-align: left;
-    font-size: 20px;
+    font-size: 1.25rem;
+    padding-bottom: 5px;
 }
 
 .copyright{
