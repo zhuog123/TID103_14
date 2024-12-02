@@ -66,7 +66,7 @@
     }
 
     /* 精選類別 */
-    .index-feature ul {
+    .index-feature{
         max-width: 720px;
     }
     .index-feature ul li {
@@ -116,11 +116,13 @@
         flex-direction: column-reverse;
         gap: 20px;
         text-align: center;
+        overflow: hidden;
     }
     .copyright-text-left {
         width: 100%;
         white-space: nowrap;
-        overflow: hidden;
+        position: relative;
+        left: 0;
     }
     .copyright-text-left p:nth-of-type(1) {
         text-indent: 1rem;
@@ -203,11 +205,13 @@
     }
 
     /* 精選專區 */
-    .index-feature ul {
+    .index-feature {
         max-width: 90vw;
+        overflow: hidden;
+    }
+    .index-feature ul{
         gap: 20px;
         justify-content: flex-start;
-        overflow: hidden;
     }
     .index-feature ul li {
         flex: 0 0 80%;

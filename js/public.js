@@ -1,5 +1,5 @@
 //漢堡選單點擊展開
-$('.fa-bars').click(function(){
+$('.fa-bars').click(function () {
     $('.nav-list').fadeIn();
     $('.fa-xmark').css({
         transition: 'transform 1s ease',
@@ -8,17 +8,17 @@ $('.fa-bars').click(function(){
     $('.menu-wrapper').animate({
         left: 0,
     })
-    
+
 })
 //點擊遮罩或叉叉收起清單
-function closeList(item){
-    item.click(function(){
+function closeList(item) {
+    item.click(function () {
         $('.fa-xmark').css({
             transform: 'rotate(-180deg)'
         })
         $('.menu-wrapper').animate({
             left: '-80vw',
-        },function(){
+        }, function () {
             $('.nav-list').fadeOut()
         })
     })
@@ -298,7 +298,7 @@ $('#receiveAddress1').on('change', function () {
     });
 });
 
-//購物車資料勾選一致
+//購物車個人資料勾選一致
 $('#same-info').change(function () {
     if ($(this).is(':checked')) {
         $('#receiveName').val($('#orderName').val());
@@ -310,9 +310,74 @@ $('#same-info').change(function () {
 })
 
 
+//滑動函數
+function enableTouchScroll(containerSelector, contentSelector) {
+    let startX = 0; // 起始的水平坐標
+    let currentLeft = 0; // 當前的內容偏移量
+    let maxLeft = 0; // 最大向右偏移量
+
+    // 初始化滑動邏輯
+    $(containerSelector).each(function () {
+        let $container = $(this);
+        let $content = $container.find(contentSelector);
+
+        // 根據容器和內容的寬度計算滑動範圍
+        let containerWidth = $container.width();
+        let totalWidth = $content[0].scrollWidth;
+        let minLeft = containerWidth - totalWidth;
+
+        // 監聽 touchstart 事件
+        $content.on('touchstart', function (event) {
+            startX = event.originalEvent.touches[0].clientX; // 記錄手指觸控的 X 坐標
+            currentLeft = parseInt($content.css('left')) || 0; // 當前的 left 值
+            $content.css('transition', 'none'); // 移除過渡動畫
+        });
+
+        // 監聽 touchmove 事件
+        $content.on('touchmove', function (event) {
+            let currentX = event.originalEvent.touches[0].clientX; // 當前手指的 X 坐標
+            let deltaX = currentX - startX; // 水平滑動的距離
+            let newLeft = currentLeft + deltaX; // 計算新的 left 值
+
+            // 限制滑動範圍
+            newLeft = Math.min(maxLeft, Math.max(newLeft, minLeft));
+
+            // 更新 left 值
+            $content.css('left', newLeft + 'px');
+        });
+
+        // 監聽 touchend 事件
+        $content.on('touchend', function () {
+            $content.css('transition', 'left 0.3s ease'); // 恢復過渡動畫
+        });
+    });
+
+}
+
+enableTouchScroll('.post', 'ul');
+enableTouchScroll('.index-feature', 'ul');
+
+
 //copyright 跑馬燈
-$(document).ready(function(){
-    $('.copyright-text-left p').css({
-        // transform:'translateX(-50px)'
-    })
-})
+function Marquee() {
+    let containerWidth = parseInt($('.copyright-text').width()) + 2; //+2防止網頁拉動的誤差值
+    let containWidth = parseInt($('.copyright-text-left')[0].scrollWidth);
+
+    if(containerWidth - containWidth < 0){
+        $('.copyright-text-left').stop(true, true).css('left', containWidth).animate({
+            left: -containWidth,
+        }, 20000, 'linear', Marquee); // 動畫結束後再調用自身
+    }else{
+        $('.copyright-text-left').stop(true, true).css('left', 0);
+    }
+}
+
+//可視窗口改變時
+let resizeTimer; // 防止頻繁觸發
+$(window).on('resize', function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(Marquee, 100); // 延遲執行，防止重複觸發
+});
+
+// 初始化顯示當前尺寸
+$(document).ready(Marquee);
