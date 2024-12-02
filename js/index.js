@@ -31,6 +31,19 @@ var swiper = new Swiper(mySwiper, {
     },
 });
 
+//店家公告
+$('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 20,
+    responsive: {
+        0: {
+            items: 1.2
+        },
+        769: {
+            items: 3
+        }
+    }
+})
 
 // // 檢查登入狀態並更新 header
 // function updateHeader() {

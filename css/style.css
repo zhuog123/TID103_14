@@ -396,6 +396,13 @@ main {
     color: #1863DD;
 }
 
+.owl-nav{
+    display: none;
+}
+.owl-dots{
+    display: none;
+}
+
 /* 當月推薦 */
 .recommend{
     display: flex;
