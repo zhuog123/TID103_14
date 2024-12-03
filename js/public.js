@@ -64,19 +64,19 @@ function Marquee() {
         // console.log('跑馬燈執行')
         //修改父元素樣式
         $('.copyright-text-left').css({
-            height: '16px'
+            height: '20px'
         })
         //修改自己的樣式
         p.css({
             position: 'absolute',
-            top: '-18px',
+            top: '-22px',
             left: 0,
         })
         //每隔 10 秒輪到自己的時候加上 .active，除了自己以外都去掉 .active
         //有 .active 的 p 樣式發生改變
         let index = 0;
         function animateMarquee() {
-            p.css({ top: '-18px', left: 0, }).removeClass('active');
+            p.css({ top: '-22px', left: 0, }).removeClass('active');
             p.filter(`:eq(${index})`).addClass('active');
             $('.copyright-text-left p.active')
                 .stop(true, true)
