@@ -120,8 +120,15 @@
     }
     .copyright-text-left {
         width: 100%;
+       
         white-space: nowrap;
         position: relative;
+        left: 0;
+        overflow: hidden;
+    }
+    .copyright-text-left p{
+        position: relative;
+        top: 0;
         left: 0;
     }
     .copyright-text-left p:nth-of-type(1) {

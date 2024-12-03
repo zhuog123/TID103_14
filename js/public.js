@@ -374,16 +374,103 @@ enableTouchScroll('.index-feature', 'ul');
 
 
 //copyright 跑馬燈
+// function Marquee() {
+//     let containerWidth = parseInt($('.copyright-text').width()) + 2; //+2防止網頁拉動的誤差值
+//     let containWidth = parseInt($('.copyright-text-left')[0].scrollWidth);
+
+//     if (containerWidth - containWidth < 0) {
+//         $('.copyright-text-left')
+//             .stop(true, true)
+//             .css('left', 0)
+//             .delay(2000)
+//             .animate({
+//                 left: -containWidth,
+//             }, 5000, 'linear',function(){
+//                 $(this).css({
+//                     left:0,
+//                 })
+//             })
+
+//     } else {
+//         $('.copyright-text-left').stop(true, true).css('left', 0);
+//     }
+// }
+
+// //可視窗口改變時
+// let resizeTimer; // 防止頻繁觸發
+// $(window).on('resize', function () {
+//     clearTimeout(resizeTimer);
+//     resizeTimer = setTimeout(Marquee, 100); // 延遲執行，防止重複觸發
+// });
+
+// // 初始化顯示當前尺寸
+// $(document).ready(Marquee);
+
+
+
+
+//copyright 跑馬燈
 function Marquee() {
     let containerWidth = parseInt($('.copyright-text').width()) + 2; //+2防止網頁拉動的誤差值
     let containWidth = parseInt($('.copyright-text-left')[0].scrollWidth);
+    let p = $('.copyright-text-left p')
+    //當 containerWidth 的寬 小於 containWidth 的寬，的時候，才執行
+    if (containerWidth - containWidth < 0) {
+        // console.log('跑馬燈執行')
+        //修改父元素樣式
+        $('.copyright-text-left').css({
+            height: '14px'
+        })
+        //修改自己的樣式
+        p.css({
+            position: 'absolute',
+            top: '-14px',
+            left: 0,
+        })
+        //每隔 10 秒輪到自己的時候加上 .active，除了自己以外都去掉 .active
+        //有 .active 的 p 樣式發生改變
+        let index = 0;
+        function animateMarquee() {
+            p.css({ top: '-14px', left: 0, }).removeClass('active');
+            p.filter(`:eq(${index})`).addClass('active');
+            $('.copyright-text-left p.active').stop(true, true).animate({
+                top: 0,
+            }, 1000, function () {
+                $(this).animate({
+                    left: -containWidth,
+                }, {
+                    duration: 8000,
+                    easing: 'linear'
+                })
+            })
+            index++;
+            if (index > p.length - 1) {
+                index = 0
+            }
+        }
+        animateMarquee();
 
-    if(containerWidth - containWidth < 0){
-        $('.copyright-text-left').stop(true, true).css('left', containWidth).animate({
-            left: -containWidth,
-        }, 20000, 'linear', Marquee); // 動畫結束後再調用自身
-    }else{
-        $('.copyright-text-left').stop(true, true).css('left', 0);
+        let timer = setInterval(function () {
+            animateMarquee();
+        }, 10000)
+        // 保存定時器的引用，以便後續清除  
+        $('.copyright-text-left').data('marqueeTimer', timer);
+    } else {
+        // 停止動畫並恢復樣式  
+        let timer = $('.copyright-text-left').data('marqueeTimer');
+        if (timer) {
+            clearInterval(timer); // 清除定時器  
+            $('.copyright-text-left').removeData('marqueeTimer'); // 移除定時器引用  
+        }
+
+        $('.copyright-text-left').css({
+            height: 'auto',
+        });
+        p.stop(true, true).css({
+            position: 'relative',
+            top: 0,
+            left: 0,
+        }).removeClass('active');
     }
 }
 
@@ -396,3 +483,14 @@ $(window).on('resize', function () {
 
 // 初始化顯示當前尺寸
 $(document).ready(Marquee);
+
+// // 頁面切換處理
+// $(window).on('pageshow', function () {
+//     let timer = $('.copyright-text-left').data('marqueeTimer');
+//     if (timer) {
+//         clearInterval(timer); // 停止定時器
+//         $('.copyright-text-left').removeData('marqueeTimer');
+//     }
+//     // 重新執行跑馬燈
+//     Marquee();
+// });
