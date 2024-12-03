@@ -94,7 +94,7 @@ nav ul li i{
     font-size: 1.5rem;
 }
 nav ul li span{
-    font-size: 14px;
+    font-size: 12px;
     color: #fff;
     text-align: center;
     display: block;
@@ -204,7 +204,7 @@ main{
     margin-right: 40px;
 }
 .guid-tour-bar-center>a:last-child{
-    color: #1863DD;
+    color: #fff;
 }
 
 /* 回到最上 */
@@ -393,7 +393,7 @@ main {
     margin-left: 5px;
 }
 .post a:hover{
-    color: #1863DD;
+    color: #9E8966;
 }
 
 .owl-nav{
@@ -441,7 +441,7 @@ main {
     margin-left: 5px;
 }
 .product-top a:hover{
-    color: #1863DD;
+    color: #9E8966;
 }
 .product-top-small{
     display: none;
@@ -517,7 +517,7 @@ main {
     padding: 15px 0;
 }
 .product-bottom>li>a:hover{
-    color: #1863DD;
+    color: #9E8966;
 }
 
 
@@ -566,7 +566,7 @@ main {
     margin-bottom: 25px;
 }
 .index-feature ul li a:hover{
-    color: #1863DD;
+    color: #9E8966;
 }
 
 /* 最新消息 */
@@ -1003,7 +1003,7 @@ input#get-new, input#privacy-policy{
     transition: all .2s linear;
 }
 .contact-table button:hover{
-    background-color: #1C93FF;
+    background-color: #9E8966;
     color: #F9F7F3;
 }
 
@@ -1188,7 +1188,7 @@ input#get-new, input#privacy-policy{
     padding: 15px 0;
 }
 .product-container li>a:nth-of-type(1):hover{
-    color: #1863DD;
+    color: #9E8966;
 }
 .product-container-img{
     position: relative;
@@ -1499,7 +1499,7 @@ input#get-new, input#privacy-policy{
     transition: all .2s linear;
 }
 .buy-details a:hover{
-    background-color: #1C93FF;
+    background-color: #9E8966;
     color: #0C2557;
 }
 .order-item, .order-sale, .order-fare, .order-total, .point-use, .point-count{
@@ -1683,7 +1683,7 @@ input#get-new, input#privacy-policy{
     transition: all .2s linear;
 }
 .cart-step-button a:hover{
-    background-color: #1C93FF;
+    background-color: #9E8966;
     color: #0C2557;
 }
 
@@ -1744,9 +1744,13 @@ input#get-new, input#privacy-policy{
     padding: 30px 0;
 }
 .item-info b{
-    display: block;
+    /* display: block; */
+    display: none;
     font-weight: bold;
     font-size: 36px;
+}
+.item-info b.choose-price{
+    display: block;
 }
 .item-info i{
     display: block;
