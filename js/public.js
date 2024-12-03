@@ -374,42 +374,6 @@ enableTouchScroll('.index-feature', 'ul');
 
 
 //copyright 跑馬燈
-// function Marquee() {
-//     let containerWidth = parseInt($('.copyright-text').width()) + 2; //+2防止網頁拉動的誤差值
-//     let containWidth = parseInt($('.copyright-text-left')[0].scrollWidth);
-
-//     if (containerWidth - containWidth < 0) {
-//         $('.copyright-text-left')
-//             .stop(true, true)
-//             .css('left', 0)
-//             .delay(2000)
-//             .animate({
-//                 left: -containWidth,
-//             }, 5000, 'linear',function(){
-//                 $(this).css({
-//                     left:0,
-//                 })
-//             })
-
-//     } else {
-//         $('.copyright-text-left').stop(true, true).css('left', 0);
-//     }
-// }
-
-// //可視窗口改變時
-// let resizeTimer; // 防止頻繁觸發
-// $(window).on('resize', function () {
-//     clearTimeout(resizeTimer);
-//     resizeTimer = setTimeout(Marquee, 100); // 延遲執行，防止重複觸發
-// });
-
-// // 初始化顯示當前尺寸
-// $(document).ready(Marquee);
-
-
-
-
-//copyright 跑馬燈
 function Marquee() {
     let containerWidth = parseInt($('.copyright-text').width()) + 2; //+2防止網頁拉動的誤差值
     let containWidth = parseInt($('.copyright-text-left')[0].scrollWidth);
