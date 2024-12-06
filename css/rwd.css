@@ -41,6 +41,12 @@
         padding-left: 3vw;
     }
 
+    /* 購物車 */
+    .wrapper-cart{
+        margin: 0 5vw;
+    }
+
+
     /* copyright */
     .copyright-text {
         margin: 0 3vw;
@@ -72,6 +78,21 @@
     .index-feature ul li {
         width: 225px;
     }
+
+    /* 購物車 */
+    .cart-order-info{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .buy-info{
+        margin-bottom: 30px;
+    }
+    .send-info{
+        width: auto;
+    }
+    .buy-details{
+        width: auto;
+    }
 }
 
 @media screen and (max-width:1024px) {
@@ -92,9 +113,9 @@
 
 @media screen and (max-width:912px) {
     /* 首頁-當月首推 */
-    .product-bottom>li>a {
+    /* .product-bottom>li>a {
         line-height: 1.6;
-    }
+    } */
     /* .product-bottom-img:hover a{
         opacity: 0;
     }
@@ -226,6 +247,25 @@
     .index-feature ul li a:nth-child(1) {
         width: 100%;
     }
+
+    /* 購物車 */
+    .send-info-right{
+        display: none;
+    }
+    .send-info-left, .send-info-right{
+        width: auto;
+        flex: 1 1 auto;
+    }
+    .send-info-left input, .send-info-left select{
+        width: 100%;
+    }
+    .send-info h1 i{
+        display: inline-block;
+    }
+    .buy-info table{
+        /* display: none; */
+    }
+
 
     /* footer */
     .footer-text{

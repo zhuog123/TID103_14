@@ -496,8 +496,8 @@ main {
     z-index: 1;
     display: block;
     width: 100%;
-    height: 35px;
-    line-height: 35px;
+    height: 45px;
+    line-height: 45px;
     cursor: pointer;
     background-color: #9E8966;
     color: #fff;
@@ -515,6 +515,7 @@ main {
     display: block;
     color: #D6C4A5;
     padding: 15px 0;
+    line-height: 1.6;
 }
 .product-bottom>li>a:hover{
     color: #9E8966;
@@ -548,7 +549,7 @@ main {
     text-align: center;
 }
 .index-feature ul li a img{
-    width: 100%;
+    width: 80%;
     opacity: 1;
     transition: all .2s ease-in;
 }
@@ -1251,21 +1252,28 @@ input#get-new, input#privacy-policy{
     border: 1px solid #D6C4A5;
     border-radius: 7px;
     font-weight: bold;
+    cursor: pointer;
+    color: #D6C4A5;
 }
-.pages ul li:last-child{
+.pages ul li.pages-prev,.pages ul li.pages-next{
     width: 12px;
     border: 0;
 }
-.pages ul li a{
+.pages-prev{
+    /* display: none; */
+}
+.pages ul li i{
     display: block;
     width: 100%;
     height: 100%;
+    line-height: 48px;
     color: #D6C4A5;
 }
 .pages ul li:hover{
     border-color: #9E8966;
+    color: #9E8966;
 }
-.pages ul li:hover a{
+.pages ul li:hover i{
     color: #9E8966;
 }
 .pages ul li.current{
@@ -1433,6 +1441,7 @@ input#get-new, input#privacy-policy{
     line-height: 1.5;
     letter-spacing: 1px;
     text-align: justify;
+    /* border-top: 1px solid #D6C4A5; */
 }
 
 /* --- 下 --- */
@@ -1451,6 +1460,11 @@ input#get-new, input#privacy-policy{
 .send-info h1,.buy-details h1{
     font-size: 20px;
     font-weight: bold;
+}
+.send-info h1 i{
+    display: none;
+    margin: 0 10px;
+    font-size: 18px;
 }
 .send-info-left, .send-info-right{
     width: 50%;

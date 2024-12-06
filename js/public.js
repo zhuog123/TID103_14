@@ -128,7 +128,7 @@ function Marquee() {
 let resizeTimer; // 防止頻繁觸發
 $(window).on('resize', function () {
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(Marquee, 100); // 延遲執行，防止重複觸發
+    resizeTimer = setTimeout(Marquee, 3000); // 延遲執行，防止重複觸發
 });
 
 // 初始化顯示當前尺寸
@@ -287,6 +287,8 @@ function addToCart(container) {
 addToCart($('.product-container-img'));
 addToCart($('.product-bottom-img'));
 
+/* ----- item ----- */
+
 //單一商品的加入購物車
 $('.add-to-cart').on('click', 'span', function () {
     let cart = $('.fa-cart-shopping').siblings('span');
@@ -318,6 +320,8 @@ $('.add-to-cart').on('click', 'span', function () {
 $('.item-size').on('click', 'li', function () {
     $(this).addClass('choose-size').siblings().removeClass('choose-size');
 })
+
+
 
 
 /* ----- contact ----- */
