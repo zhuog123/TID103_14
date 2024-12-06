@@ -13,6 +13,7 @@ function getCookie(name) {
 //index 的輪播圖
 let mySwiper = document.querySelector('.mySwiper')
 var swiper = new Swiper(mySwiper, {
+    loop:true,
     lazy: true,
     rewind: true,
     spaceBetween: 30,
