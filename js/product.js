@@ -127,7 +127,7 @@ $('.pages').on('click', 'li', function (e) {
     }
 })
 
-//選擇類別或排序
+//選擇類別或價格排序
 $('.selector').on('change', 'select', function () {
     currentPage = 1;
     let cateVal = $('.category-selector').val();
@@ -135,10 +135,10 @@ $('.selector').on('change', 'select', function () {
     productSort(cateVal, priVal);
 })
 
-//確認選取的類別和排序
+//確認選取的類別和價格排序
 function productSort(cateVal, priVal) {
     let getArr = categorySort(cateVal); //取得該類別的陣列
-    let temArr = [...getArr]; //有需要使用淺拷貝??
+    let temArr = [...getArr]; //有需要使用淺拷貝?? //好像不需要
     if (priVal === '默認排序') {
         temArr.sort((a, b) => {
             return a.id - b.id;
@@ -166,3 +166,38 @@ function categorySort(cateVal) {
     })
     return temArr;
 }
+
+//搜尋
+$('.find-product').on('input', function () {
+    // currentPage = 1;
+    // let cateVal = $('.category-selector').val();
+    // let priVal = $('.sorting-selector').val();
+
+    //搜尋商品的時候，頁數一樣要改回第一頁，並且要先判斷類別跟價格排序來確定
+    //使用的是哪一個陣列
+
+    //先使用全部商品的陣列做測試，做出搜尋功能
+    let input = $(this).val()
+    productInfo.filter((item) => {
+
+    })
+
+
+})
+
+
+
+
+//店家公告
+$('.owl-carousel').owlCarousel({
+    margin: 20,
+    responsive: {
+        0: {
+            items: 1.2,
+            loop: true
+        },
+        769: {
+            items: 3
+        }
+    }
+})

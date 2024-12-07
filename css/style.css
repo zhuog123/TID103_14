@@ -186,7 +186,7 @@ main{
 /* 位置指標 */
 .guid-tour-bar{
     width: 100%;
-    height: 40px;
+    height: 45px;
     background-color: #D6C4A5;
     
     /* padding-left: 5vw; */
@@ -1160,6 +1160,7 @@ input#get-new, input#privacy-policy{
     cursor: pointer;
     outline: none;
     padding: 0 10px;
+    border-radius: 4px !important;
 }
 .selector li input{
     box-sizing: border-box;
@@ -1234,6 +1235,14 @@ input#get-new, input#privacy-policy{
 .product-container-img:hover span{
     opacity: 1;
 }
+.cannot-find-product{
+    width: 100%;
+    padding-bottom: 80px;
+    text-align: center;
+    color: #D6C4A5;
+    font-size: 1.2rem;
+    display: none;
+}
 
 /* 頁數 */
 .pages{
@@ -1260,9 +1269,6 @@ input#get-new, input#privacy-policy{
     width: 12px;
     border: 0;
 }
-.pages-prev{
-    /* display: none; */
-}
 .pages ul li i{
     display: block;
     width: 100%;
@@ -1279,7 +1285,6 @@ input#get-new, input#privacy-policy{
 }
 .pages ul li.current{
     background-color: #D6C4A5;
-    border: 0;
 }
 .pages ul li.current span{
     color: #0C2557;

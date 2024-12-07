@@ -149,66 +149,66 @@ $(document).ready(Marquee);
 /* ----- index ----- */
 
 //滑動函數
-function enableTouchScroll(containerSelector, contentSelector) {
-    let startX = 0; // 起始的水平坐標
-    let startY = 0; // 起始的垂直坐標
-    let currentLeft = 0; // 當前的內容偏移量
-    let maxLeft = 0; // 最大向右偏移量
-    let isHorizontal = false; // 是否為水平滑動
+// function enableTouchScroll(containerSelector, contentSelector) {
+//     let startX = 0; // 起始的水平坐標
+//     let startY = 0; // 起始的垂直坐標
+//     let currentLeft = 0; // 當前的內容偏移量
+//     let maxLeft = 0; // 最大向右偏移量
+//     let isHorizontal = false; // 是否為水平滑動
 
-    $(containerSelector).each(function () {
-        let $container = $(this);
-        let $content = $container.find(contentSelector);
+//     $(containerSelector).each(function () {
+//         let $container = $(this);
+//         let $content = $container.find(contentSelector);
 
-        // 根據容器和內容的寬度計算滑動範圍
-        let containerWidth = $container.width();
-        let totalWidth = $content[0].scrollWidth;
-        let minLeft = containerWidth - totalWidth;
+//         // 根據容器和內容的寬度計算滑動範圍
+//         let containerWidth = $container.width();
+//         let totalWidth = $content[0].scrollWidth;
+//         let minLeft = containerWidth - totalWidth;
 
-        // 監聽 touchstart 事件
-        $content.on('touchstart', function (event) {
-            let touch = event.originalEvent.touches[0];
-            startX = touch.clientX; // 起始的 X 坐標
-            startY = touch.clientY; // 起始的 Y 坐標
-            currentLeft = parseInt($content.css('left')) || 0; // 當前的 left 值
-            isHorizontal = false; // 重置水平滑動判斷
-            $content.css('transition', 'none'); // 移除過渡動畫
-        });
+//         // 監聽 touchstart 事件
+//         $content.on('touchstart', function (event) {
+//             let touch = event.originalEvent.touches[0];
+//             startX = touch.clientX; // 起始的 X 坐標
+//             startY = touch.clientY; // 起始的 Y 坐標
+//             currentLeft = parseInt($content.css('left')) || 0; // 當前的 left 值
+//             isHorizontal = false; // 重置水平滑動判斷
+//             $content.css('transition', 'none'); // 移除過渡動畫
+//         });
 
-        // 監聽 touchmove 事件
-        $content.on('touchmove', function (event) {
-            let touch = event.originalEvent.touches[0];
-            let deltaX = touch.clientX - startX; // 水平滑動距離
-            let deltaY = touch.clientY - startY; // 垂直滑動距離
+//         // 監聽 touchmove 事件
+//         $content.on('touchmove', function (event) {
+//             let touch = event.originalEvent.touches[0];
+//             let deltaX = touch.clientX - startX; // 水平滑動距離
+//             let deltaY = touch.clientY - startY; // 垂直滑動距離
 
-            // 判斷滑動方向
-            if (!isHorizontal && Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 10) {
-                isHorizontal = true; // 確認為水平滑動
-                event.preventDefault(); // 阻止垂直滾動
-            }
+//             // 判斷滑動方向
+//             if (!isHorizontal && Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 10) {
+//                 isHorizontal = true; // 確認為水平滑動
+//                 event.preventDefault(); // 阻止垂直滾動
+//             }
 
-            if (isHorizontal) {
-                let newLeft = currentLeft + deltaX; // 計算新的 left 值
+//             if (isHorizontal) {
+//                 let newLeft = currentLeft + deltaX; // 計算新的 left 值
 
-                // 限制滑動範圍
-                newLeft = Math.min(maxLeft, Math.max(newLeft, minLeft));
+//                 // 限制滑動範圍
+//                 newLeft = Math.min(maxLeft, Math.max(newLeft, minLeft));
 
-                // 更新 left 值
-                $content.css('left', newLeft + 'px');
-            }
-        });
+//                 // 更新 left 值
+//                 $content.css('left', newLeft + 'px');
+//             }
+//         });
 
-        // 監聽 touchend 事件
-        $content.on('touchend', function () {
-            if (isHorizontal) {
-                $content.css('transition', 'left 0.3s ease'); // 恢復過渡動畫
-            }
-        });
-    });
-}
+//         // 監聽 touchend 事件
+//         $content.on('touchend', function () {
+//             if (isHorizontal) {
+//                 $content.css('transition', 'left 0.3s ease'); // 恢復過渡動畫
+//             }
+//         });
+//     });
+// }
 
-// enableTouchScroll('.post', 'ul');
-enableTouchScroll('.index-feature', 'ul');
+// // enableTouchScroll('.post', 'ul');
+// enableTouchScroll('.index-feature', 'ul');
 
 /* ----- login & register ----- */
 

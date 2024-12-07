@@ -34,11 +34,11 @@ var swiper = new Swiper(mySwiper, {
 
 //店家公告
 $('.owl-carousel').owlCarousel({
-    loop: true,
     margin: 20,
     responsive: {
         0: {
-            items: 1.2
+            items: 1.2,
+            loop: true
         },
         769: {
             items: 3

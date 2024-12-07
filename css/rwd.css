@@ -41,6 +41,12 @@
         padding-left: 3vw;
     }
 
+    /* 商品資訊 */
+    .wrapper-products{
+        margin: 0 3vw;
+    }
+
+
     /* 購物車 */
     .wrapper-cart{
         margin: 0 5vw;
@@ -231,7 +237,8 @@
         display: block;
     }
 
-    /* 精選專區 */
+
+    /* 精選類別 */
     .index-feature {
         max-width: 90vw;
         overflow: hidden;
@@ -241,12 +248,27 @@
         justify-content: flex-start;
     }
     .index-feature ul li {
-        flex: 0 0 80%;
+        width: 100%;
     }
 
     .index-feature ul li a:nth-child(1) {
         width: 100%;
     }
+    .index-feature ul li a img{
+        width: 100%;
+    }
+    
+
+
+    /* 商品資訊 */
+    .selector{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .selector li{
+        flex-basis: auto;
+    }
+    
 
     /* 購物車 */
     .send-info-right{
@@ -290,7 +312,59 @@
 
 }
 
+@media screen and (max-width:767px) {
+    /* 商品資訊 */
+    .product-container li{
+        flex-basis: calc((100% - 25px) / 2);
+    }
+    .product-container li p{
+        font-size: 0.75rem;
+    }
+    .product-container li>a:nth-of-type(1){
+        line-height: 1.4;
+        font-size: 0.875rem;
+    }
+
+    /* 上下間距調整，頁數按鈕大小調整 */
+    .product-post{
+        padding: 20px 0;
+    }
+    .product-container{
+        padding: 20px 0;
+        padding-bottom: 40px;
+    }
+    .pages{
+        padding-bottom: 30px;
+    }
+    .pages ul li{
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+    }
+    .pages ul li.current span{
+        font-size: 0.875rem;
+    }
+    .pages ul li i{
+        line-height: 36px;
+    }
+}
+
+
+
 @media screen and (max-width:540px) {
+    /* 首頁-當月首推 */
+    .product-bottom>li>a{
+        line-height: 1.4;
+        font-size: 0.875rem;
+    }
+    .product-bottom>li>p{
+        font-size: 0.75rem;
+    }
+    /* 精選類別 */
+    .index-feature ul li a{
+        font-size: 0.875rem;
+    }
+
     /* login */
     .center{
         padding: 32px 3vw;
@@ -307,6 +381,14 @@
     .not-member a{
         width: 100%;
     }
+    /* 商品資訊 */
+    .product-container{
+        column-gap: 20px;
+    }
+    .product-container li{
+        flex-basis: calc((100% - 20px) / 2);
+    }
+
 }
 
 
@@ -342,7 +424,7 @@
 
     /* 麵包屑 */
     .guid-tour-bar {
-        height: 30px;
+        height: 40px;
     }
 
     /* 店家公告 */
