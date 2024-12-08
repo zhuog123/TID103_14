@@ -67,6 +67,36 @@
         margin-top: 30px;
     }
 
+    /* 關於我們 */
+    .about-banner h1{
+        font-size: 56px;
+    }
+    .shop-info section{
+        width: auto;
+        margin: 0 3vw;
+    }
+    .about-info{
+        padding: 40px 50px;
+    }
+    .about-info h2{
+        font-size: 24px;
+        letter-spacing: 1.6px;
+        line-height: 40px;
+    }
+    .about-info p{
+        margin: 20px 0;
+    }
+    .about-content::after{
+        font-size: 28px;
+    }
+
+    /* 聯絡我們 */
+    .contact-wrapper{
+        width: auto;
+        margin: 80px 3vw;
+    }
+
+
     /* copyright */
     .copyright-text {
         margin: 0 3vw;
@@ -122,6 +152,13 @@
     .buy-details{
         width: auto;
     }
+
+    /* 聯絡我們 */
+    .contact-wrapper{
+        margin: 50px 3vw;
+        flex-direction: column;
+    }
+
 }
 
 @media screen and (max-width:1024px) {
@@ -146,6 +183,24 @@
     .cart-step-button a{
         width: 100%;
     }
+
+    /* 關於我們 */
+    .about-banner h1{
+        font-size: 40px;
+    }
+    .about-info{
+        padding: 30px;
+    }
+    .about-info h2{
+        font-size: 20px;
+    }
+    .about-content::after{
+        font-size: 24px;
+    }
+    .about-info p{
+        margin-bottom: 0;
+    }
+
 }
 
 @media screen and (max-width:912px) {
@@ -223,6 +278,11 @@
     }
     .product-bottom li {
         width: calc((100% - 30px) / 3);
+    }
+
+    /* 關於我們 */
+    .shop-info>p{
+        padding: 50px;
     }
 
 
@@ -418,6 +478,32 @@
         font-size: 30px;
     }
 
+    /* 關於我們 */
+    .about-banner{
+        height: 360px;
+    }
+    .about-banner h1{
+        font-size: 32px;
+    }
+    .shop-info>p{
+        padding: 30px 20px;
+    }
+    .shop-info section{
+        flex-direction: column-reverse;
+        border-radius: 20px;
+    }
+    .shop-info section:nth-of-type(2){
+        flex-direction: column-reverse;
+    }
+    .about-photo{
+        border-radius: 20px 20px 0 0 ;
+        flex-basis: 350px;
+    }
+    .about-content{
+        margin: 30px 0;
+    }
+
+
     /* footer */
     .footer-text{
         width: 80vw;
@@ -524,9 +610,37 @@
         font-size: 20px;
     }
 
-    
-    
+    /* 關於我們 */
+    .about-banner{
+        height: 300px;
+    }
+    .about-photo{
+        flex-basis: 260px;
+    }
+    .shop-info>p{
+        font-size: 12px;
+    }
+    .about-content{
+        height: 240px;
+    }
+    .about-content::after{
+        line-height: 240px;
+    }
+    .about-info{
+        padding: 20px;
+    }
+    .about-info p{
+        font-size: 14px;
+    }
+    .about-info h2{
+        text-align: justify;
+    }
 
+    /* 聯絡我們 */
+    .contact-table{
+        width: auto;
+        margin: 0 3vw;
+    }
 }
 
 
@@ -581,6 +695,17 @@
     /* 會員專區 */
     .member-banner{
         height: 250px;
+    }
+
+    /* 關於我們 */
+    .about-banner{
+        height: 240px;
+    }
+    .about-content{
+        height: 200px;
+    }
+    .about-content::after{
+        line-height: 200px;
     }
 
 }

@@ -97,7 +97,7 @@ function bindProduct(infoArr = productInfo) {
     pages.html(page);
 
     //渲染完畢回到頂部
-    $('html, body').animate({ scrollTop: 0 }, 800);
+    $('html, body').stop().animate({ scrollTop: 0 }, 800);
 }
 bindProduct();
 
@@ -108,13 +108,15 @@ $('.pages').on('click', 'li', function (e) {
     if ($(this).hasClass('pages-prev')) {
         if (currentPage <= 1) return
         currentPage--;
-        productSort(cateVal, priVal);
+        let res = productSort(cateVal, priVal);
+        bindProduct(res);
     }
 
     if ($(this).hasClass('pages-next')) {
         if (currentPage >= totalPage) return
         currentPage++;
-        productSort(cateVal, priVal);
+        let res = productSort(cateVal, priVal);
+        bindProduct(res);
     }
 
     if ($(this).hasClass('current')) {
@@ -123,7 +125,8 @@ $('.pages').on('click', 'li', function (e) {
 
     if ($(this).data('page')) {
         currentPage = $(this).data('page');
-        productSort(cateVal, priVal);
+        let res = productSort(cateVal, priVal);
+        bindProduct(res);
     }
 })
 
@@ -132,8 +135,17 @@ $('.selector').on('change', 'select', function () {
     currentPage = 1;
     let cateVal = $('.category-selector').val();
     let priVal = $('.sorting-selector').val();
-    productSort(cateVal, priVal);
+    let inputVal = $('.find-product').val(); //輸入框
+    let res = productSort(cateVal, priVal);
+    //確認輸入框內有沒有值，如果有的話，把input清空之後再執行
+    if (!inputVal) {
+        bindProduct(res);
+    } else {
+        $('.find-product').val('');
+        bindProduct(res);
+    }
 })
+
 
 //確認選取的類別和價格排序
 function productSort(cateVal, priVal) {
@@ -152,7 +164,8 @@ function productSort(cateVal, priVal) {
             return a.price - b.price;
         })
     }
-    bindProduct(temArr);
+    // checkInput(temArr);
+    return temArr;
 }
 
 //取得選取類別的值之後返回新的商品陣列
@@ -169,21 +182,31 @@ function categorySort(cateVal) {
 
 //搜尋
 $('.find-product').on('input', function () {
-    // currentPage = 1;
-    // let cateVal = $('.category-selector').val();
-    // let priVal = $('.sorting-selector').val();
-
-    //搜尋商品的時候，頁數一樣要改回第一頁，並且要先判斷類別跟價格排序來確定
-    //使用的是哪一個陣列
-
-    //先使用全部商品的陣列做測試，做出搜尋功能
+    //搜尋商品的時候，頁數一樣要改回第一頁
+    //並且要先判斷類別跟價格排序來確定使用的是哪一個陣列
+    currentPage = 1;
+    let cateVal = $('.category-selector').val();
+    let priVal = $('.sorting-selector').val();
+    let res = productSort(cateVal, priVal);
     let input = $(this).val()
-    productInfo.filter((item) => {
-
+    let temArr = [];
+    temArr = res.filter((item) => {
+        return item.name.includes(input);
     })
-
-
+    //沒找到商品時顯示的 p
+    if (!temArr.length) {
+        $('.cannot-find-product').css({ display: 'block' })
+        bindProduct(temArr)
+    }else{
+        $('.cannot-find-product').css({ display: 'none' })
+        bindProduct(temArr);
+    }
 })
+
+
+
+
+
 
 
 
