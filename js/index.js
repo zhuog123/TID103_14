@@ -13,7 +13,7 @@ function getCookie(name) {
 //index 的輪播圖
 let mySwiper = document.querySelector('.mySwiper')
 var swiper = new Swiper(mySwiper, {
-    loop:true,
+    loop: true,
     lazy: true,
     rewind: true,
     spaceBetween: 30,
@@ -69,7 +69,6 @@ $('.carousel-1').owlCarousel({
 //     window.location.href = '/login.html';
 // }
 
-// // 初始化
-// document.addEventListener('DOMContentLoaded', function () {
-//     updateHeader();
-// });
+AOS.init({
+    once: true,
+});

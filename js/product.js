@@ -95,9 +95,6 @@ function bindProduct(infoArr = productInfo) {
         `;
     }
     pages.html(page);
-
-    //渲染完畢回到頂部
-    $('html, body').stop().animate({ scrollTop: 0 }, 800);
 }
 bindProduct();
 
@@ -111,23 +108,22 @@ $('.pages').on('click', 'li', function (e) {
         let res = productSort(cateVal, priVal);
         bindProduct(res);
     }
-
     if ($(this).hasClass('pages-next')) {
         if (currentPage >= totalPage) return
         currentPage++;
         let res = productSort(cateVal, priVal);
         bindProduct(res);
     }
-
     if ($(this).hasClass('current')) {
         return;
     }
-
     if ($(this).data('page')) {
         currentPage = $(this).data('page');
         let res = productSort(cateVal, priVal);
         bindProduct(res);
     }
+    //渲染完畢回到頂部
+    $('html, body').stop().animate({ scrollTop: 0 }, 800);
 })
 
 //選擇類別或價格排序
@@ -202,11 +198,6 @@ $('.find-product').on('input', function () {
         bindProduct(temArr);
     }
 })
-
-
-
-
-
 
 
 
