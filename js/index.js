@@ -33,7 +33,7 @@ var swiper = new Swiper(mySwiper, {
 });
 
 //店家公告
-$('.owl-carousel').owlCarousel({
+$('.carousel-1').owlCarousel({
     margin: 20,
     responsive: {
         0: {

@@ -189,7 +189,7 @@ $('.find-product').on('input', function () {
 
 
 //店家公告
-$('.owl-carousel').owlCarousel({
+$('.product-post').owlCarousel({
     margin: 20,
     responsive: {
         0: {

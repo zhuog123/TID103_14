@@ -15,7 +15,10 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
         integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="shortcut icon" href="./img/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/rwd.css">
@@ -94,7 +97,7 @@
 
 
             <div class="buy-info">
-                <h1>購物車</h1>
+                <h1>購物車<i class="fa-solid fa-circle-info"></i></h1>
 
                 <table>
                     <thead>
@@ -111,7 +114,7 @@
                     </thead>
 
                     <tbody>
-                        <tr class="cart-content">
+                        <tr class="cart-content-a cart-content">
                             <td><input type="checkbox" checked></td>
                             <td><a href="#"><img src="./img/p11.jpg" alt="酒漬葡萄超厚層布丁塔"></a></td>
                             <td><a href="#">酒漬葡萄超厚層布丁塔</a></td>
@@ -122,12 +125,12 @@
                             <td>NT $ <span class="cart-count">625</span></td>
                             <td><span class="cart-delete"><i class="fa-solid fa-trash-can"></i></span></td>
                         </tr>
-                        <tr class="cart-content">
+                        <tr class="cart-content-a cart-content">
                             <td><input type="checkbox" checked></td>
                             <td><a href="#"><img src="./img/p3.jpg" alt="蘋果千層酥派"></a></td>
                             <td><a href="#">蘋果千層酥派</a></td>
                             <!-- <td></td> -->
-                            <td>NT $ <span span class="cart-one">500</span></td>
+                            <td>NT $ <span class="cart-one">500</span></td>
                             <td><span class="cart-reduce">–</span><span class="cart-number">1</span><span
                                     class="cart-plus">+</span></td>
                             <td>NT $ <span class="cart-count">500</span></td>
@@ -137,9 +140,36 @@
 
 
                 </table>
-                <div class="buy-info-replace-table">
-                    
+                
+                <div class="cart-replace-table">
+                    <div class="cart-content-b cart-content">
+                        <div class="cart-content-b-top">
+                            <input type="checkbox" checked>
+                            <a href="#"><img src="./img/p11.jpg" alt="酒漬葡萄超厚層布丁塔"></a>
+                            <a href="#">酒漬葡萄超厚層布丁塔</a>
+                            <span class="cart-delete"><i class="fa-solid fa-trash-can"></i></span>
+                            <div>NT $ <span class="cart-one">625</span></div> <!-- 單價，用opacity隱藏 -->
+                        </div>
+                        <div class="cart-content-b-bottom">
+                            <div><span class="cart-reduce">–</span><span class="cart-number">1</span><span class="cart-plus">+</span></div>
+                            <div>NT $ <span class="cart-count">625</span></div>
+                        </div>
+                    </div>
+                    <div class="cart-content-b cart-content">
+                        <div class="cart-content-b-top">
+                            <input type="checkbox" checked>
+                            <a href="#"><img src="./img/p3.jpg" alt="蘋果千層酥派"></a>
+                            <a href="#">蘋果千層酥派</a>
+                            <span class="cart-delete"><i class="fa-solid fa-trash-can"></i></span>
+                            <div>NT $ <span class="cart-one">500</span></div> <!-- 單價，用opacity隱藏 -->
+                        </div>
+                        <div class="cart-content-b-bottom">
+                            <div><span class="cart-reduce">–</span><span class="cart-number">1</span><span class="cart-plus">+</span></div>
+                            <div>NT $ <span class="cart-count">500</span></div>
+                        </div>
+                    </div>
                 </div>
+                
 
                 <p>*同品項不同尺寸會依比例切分，例生巧克力塔/十吋 可切分成4個 生巧克力塔/單份．可購量也將依比例換算
                     例如尚可購 2個生巧克力塔/十吋，相當於8個生巧克力塔/單份，以及 1個生巧克力塔/十吋 和 4個 生巧克力塔/單份</p>
@@ -282,6 +312,7 @@
         </div>
     </footer>
     <script src="./js/public.js"></script>
+    <script src="./js/cart.js"></script>
 </body>
 
 </html>

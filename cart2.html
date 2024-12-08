@@ -89,36 +89,36 @@
                 <div class="wrapper-cart-contain">
                     <!-- 左側 -->
                     <section class="cart-check-profile">
-                        <div>
+                        <div class="cart-check-profile-a">
                             <h2>訂購人資訊</h2>
                             <ul>
-                                <li style="flex-basis: 50%;">
+                                <li>
                                     <label for="orderName">姓名 *</label>
                                     <input type="text" id="orderName">
                                 </li>
-                                <li style="flex-basis: 46%;">
+                                <li>
                                     <label for="orderPhone">電話 *</label>
                                     <input type="text" id="orderPhone">
                                 </li>
 
-                                <li style="flex-basis: 100%;">
+                                <li>
                                     <label for="orderEmail">Email</label>
                                     <input type="text" id="orderEmail">
                                 </li>
                             </ul>
                         </div>
-                        <div>
+                        <div class="cart-check-profile-b">
                             <h2>收件人資訊<label for="same-info" style="display: inline-block;font-weight: normal;font-size: 1rem;padding-left: 15px;"><input type="checkbox" style="transform: scale(1.2);" id="same-info">同訂購人資訊請勾選</label></h2>
                             <ul>
-                                <li style="flex-basis: 50%;">
+                                <li>
                                     <label for="receiveName">姓名 *</label>
                                     <input type="text" id="receiveName">
                                 </li>
-                                <li style="flex-basis: 46%;">
+                                <li>
                                     <label for="receivePhone">電話 *</label>
                                     <input type="text" id="receivePhone">
                                 </li>
-                                <li style="flex-basis: 48%;">
+                                <li>
                                     <label for="receiveAddress1">縣市 *</label>
                                     <select name="" id="receiveAddress1">
                                         <option value="" disabled selected>縣市</option>
@@ -146,17 +146,17 @@
                                         <option value="連江縣">連江縣</option>
                                     </select>
                                 </li>
-                                <li style="flex-basis: 48%;">
+                                <li>
                                     <label for="receiveAddress2">區域 *</label>
                                     <select name="" id="receiveAddress2">
                                         <option value="" disabled selected>區域</option>
                                     </select>
                                 </li>
-                                <li style="flex-basis: 100%;">
+                                <li>
                                     <label for="receiveAddress3">地址 *</label>
                                     <input type="text" id="receiveAddress3">
                                 </li>
-                                <li style="flex-basis: 100%;">
+                                <li>
                                     <label for="receiveElse">備註</label>
                                     <textarea name="" id="receiveElse"></textarea>
                                 </li>
@@ -205,14 +205,14 @@
                                     <td>NT $ 1125</td>
                                 </tr>
                                 <tr>
-                                    <td>本次消費累積點數(會員專屬)</td>
-                                    <td></td>
-                                    <td>1125</td>
+                                    <td colspan="2">本次消費累積點數(會員專屬)</td>
+                                    <!-- <td></td> -->
+                                    <td  class="cart-check-item-ex">1125</td>
                                 </tr>
                                 <tr>
                                     <td>取貨時段</td>
-                                    <td></td>
-                                    <td>自取-2024-11-30 17:00</td>
+                                    <!-- <td></td> -->
+                                    <td colspan="2" class="cart-check-item-ex">自取-2024-11-30 17:00</td>
                                 </tr>
                             </tfoot>
                         </table>

@@ -281,6 +281,7 @@ function addToCart(container) {
     let num = parseInt(cart[0].innerText);
     span.click(function () {
         num++;
+        swal("1 件商品成功加入購物車", '', "success");
         cart.text(num);
     })
 }
@@ -299,6 +300,7 @@ $('.add-to-cart').on('click', 'span', function () {
     if ($(this).hasClass('add-btn')) {
         //判斷數字決定要給 span 加多少
         num += amount
+        swal(`${amount} 件商品成功加入購物車`, '', "success");
         cart.text(num);
     }
     //點擊加減數量按鈕
@@ -456,8 +458,4 @@ $('#same-info').change(function () {
         $('#receivePhone').val('');
     }
 })
-
-
-
-
 

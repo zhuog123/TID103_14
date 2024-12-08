@@ -49,9 +49,23 @@
 
     /* 購物車 */
     .wrapper-cart{
-        margin: 0 5vw;
+        margin: 0 3vw;
     }
 
+    /* 購物車2 */
+    .wrapper-cart2{
+        width: auto;
+        margin: 0 3vw;
+    }
+    .wrapper-cart-contain{
+        flex-direction: column;
+    }
+    .cart-check-profile, .cart-check-item{
+        width: 100%;
+    }
+    .cart-login-notice2{
+        margin-top: 30px;
+    }
 
     /* copyright */
     .copyright-text {
@@ -85,6 +99,15 @@
         width: 225px;
     }
 
+    /* 會員專區 */
+    .member-level-introduction{
+        width: auto;
+        margin: 0 3vw;
+    }
+    .member-level-introduction-center{
+        column-gap: 30px;
+    }
+
     /* 購物車 */
     .cart-order-info{
         flex-direction: column;
@@ -114,6 +137,14 @@
     }
     .product-bottom li {
         width: calc((100% - 40px) / 3);
+    }
+
+    /* 購物車2 */
+    .cart-step-button{
+        flex-direction: column;
+    }
+    .cart-step-button a{
+        width: 100%;
     }
 }
 
@@ -171,18 +202,17 @@
     .header-wrapper {
         padding: 10px 0;
     }
-
-
-
-    /* 會員專區 */
-    .member-level-introduction-center {
-        column-gap: 50px;
-        justify-content: center;
-    }
     .swiper-button-next:after,
     .swiper-button-prev:after {
         font-size: 30px;
     }
+
+
+    /* 會員專區 */
+    .member-banner{
+        height: 400px;
+    }
+    
 
     /* 首頁-當月首推 */
     .recommend-image img {
@@ -268,6 +298,37 @@
     .selector li{
         flex-basis: auto;
     }
+    .product-container li{
+        flex-basis: calc((100% - 25px) / 2);
+    }
+    .product-container li p{
+        font-size: 0.75rem;
+    }
+    .product-container li>a:nth-of-type(1){
+        line-height: 1.4;
+        font-size: 0.875rem;
+    }
+    .product-post{
+        padding: 20px 0;
+    }
+    .product-container{
+        padding: 20px 0;
+        padding-bottom: 40px;
+    }
+    .pages{
+        padding-bottom: 30px;
+    }
+    .pages ul li{
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+    }
+    .pages ul li.current span{
+        font-size: 0.875rem;
+    }
+    .pages ul li i{
+        line-height: 36px;
+    }
     
 
     /* 購物車 */
@@ -285,9 +346,77 @@
         display: inline-block;
     }
     .buy-info table{
-        /* display: none; */
+        display: none;
+    }
+    .buy-info p{
+        display: none;
+    }
+    .cart-replace-table{
+        display: block;
+    }
+    .buy-info h1 i{
+        display: inline-block;
+    }
+    .cart-login-notice{
+        flex-direction: column;
+        padding-bottom: 1.2rem;
+    }
+    .cart-login-notice h1{
+        width: 100%;
+        text-align: center;
+    }
+    .cart-login-notice a{
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 5px;
+        padding: 15px 20px;
     }
 
+    /* 購物車2 */
+    .wrapper-cart2-center{
+        padding: 1rem;
+    }
+    .cart-check-item{
+        padding: 1rem;
+    }
+    .cart-check-item table{
+        white-space: inherit;
+        line-height: 1.2;
+    }
+    .cart-login-notice2 h1{
+        white-space: inherit;
+        line-height: 1.2;
+    }
+
+    .cart-check-profile-a ul li:nth-of-type(1){
+        flex-basis: 100%;
+    }
+    .cart-check-profile-a ul li:nth-of-type(2){
+        flex-basis: 100%;
+    }
+    .cart-check-profile-b ul li:nth-of-type(1){
+        flex-basis: 100%;
+    }
+    .cart-check-profile-b ul li:nth-of-type(2){
+        flex-basis: 100%;
+    }
+    .cart-login-notice2{
+        text-align: justify;
+    }
+
+    /* 會員專區 */
+    .member-banner{
+        height: 350px;
+    }
+    .member-banner h2{
+        font-size: 30px;
+    }
+    .member-banner a{
+        font-size: 14px;
+    }
+    .member-level-introduction h1{
+        font-size: 30px;
+    }
 
     /* footer */
     .footer-text{
@@ -310,43 +439,6 @@
     }
 
 
-}
-
-@media screen and (max-width:767px) {
-    /* 商品資訊 */
-    .product-container li{
-        flex-basis: calc((100% - 25px) / 2);
-    }
-    .product-container li p{
-        font-size: 0.75rem;
-    }
-    .product-container li>a:nth-of-type(1){
-        line-height: 1.4;
-        font-size: 0.875rem;
-    }
-
-    /* 上下間距調整，頁數按鈕大小調整 */
-    .product-post{
-        padding: 20px 0;
-    }
-    .product-container{
-        padding: 20px 0;
-        padding-bottom: 40px;
-    }
-    .pages{
-        padding-bottom: 30px;
-    }
-    .pages ul li{
-        width: 36px;
-        height: 36px;
-        line-height: 36px;
-    }
-    .pages ul li.current span{
-        font-size: 0.875rem;
-    }
-    .pages ul li i{
-        line-height: 36px;
-    }
 }
 
 
@@ -388,6 +480,52 @@
     .product-container li{
         flex-basis: calc((100% - 20px) / 2);
     }
+
+    /* 購物車 */
+    .cart-login-notice h1{
+        font-size: 1rem;
+    }
+    .cart-login-notice a{
+        font-size: 0.875rem;
+    }
+    /* 購物車2 */
+    .cart-check-profile h2{
+        font-size: 20px;
+    }
+    .cart-check-profile ul li{
+        font-size: 14px;
+    }
+    .cart-check-item h2{
+        margin-bottom: 20px;
+    }
+    .cart-check-item h2,.cart-login-notice2 h1{
+        font-size: 20px;
+    }
+    .cart-check-item table{
+        font-size: 14px;
+    }
+    .cart-check-item thead th{
+        padding-bottom: 20px;
+    }
+    
+
+
+    /* 會員專區 */
+    .member-banner{
+        height: 300px;
+    }
+    .member-banner h2{
+        font-size: 24px;
+    }
+    .member-level-introduction h1{
+        font-size: 24px;
+    }
+    .cardIntro h3{
+        font-size: 20px;
+    }
+
+    
+    
 
 }
 
@@ -438,6 +576,11 @@
     }
     .product-bottom li {
         width: calc((100% - 20px) / 2);
+    }
+
+    /* 會員專區 */
+    .member-banner{
+        height: 250px;
     }
 
 }
